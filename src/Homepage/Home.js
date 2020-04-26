@@ -19,7 +19,7 @@ const home = () => {
         height="800"
       ></img>
       <div class="centered-white">DISCOVER</div>
-      <div class="centered-blue">PAKISTAN</div>
+      <div class="centered-blue">PAKISTAN.</div>
     </div>
   );
 };
