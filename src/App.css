@@ -8,41 +8,37 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-#evernote-container {
-  height: 100%;
-  box-sizing: border-box;
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
 }
-.app-container {
-  height: 100%;
-  box-sizing: border-box;
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
 }
-.quill {
-  height: 100%;
-  box-sizing: border-box;
-  width: calc(100% - 300px);
-  float: left;
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
 }
-.ql-container {
-  box-sizing: border-box;
-  height: calc(100% - 42px);
-  overflow-y: scroll;
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
 }
-.ql-editor {
-  cursor: text;
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
 }
-.MuiListItem-root.Mui-selected {
-  background-color: #d4d8e8 !important;
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
 }
-.no-note-selected {
-  font-size: 48px;
-  position: absolute;
-  top: 50px;
-  left: calc(50% - 165px);
-}
-.container {
-  position: relative;
-  text-align: center;
-}
+
 .centered-white {
   position: absolute;
   top: 50%;
@@ -50,6 +46,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 60px;
   font-stretch: expanded;
+  font-weight: 540;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -57,10 +54,105 @@ body {
 .centered-blue {
   position: absolute;
   top: 50%;
-  left: 62.5%;
+  left: 65%;
   transform: translate(-50%, -50%);
   font-size: 60px;
   font-stretch: expanded;
+  font-weight: 540;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--offWhite);
+  z-index: 1;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
 }
