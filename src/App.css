@@ -9,6 +9,25 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -40,25 +59,23 @@ h6 {
 }
 
 .centered-white {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
   font-size: 60px;
   font-stretch: expanded;
-  font-weight: 540;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .centered-blue {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 65%;
   transform: translate(-50%, -50%);
   font-size: 60px;
   font-stretch: expanded;
-  font-weight: 540;
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -71,14 +88,14 @@ h6 {
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--primaryColor);
-  transition: var(--mainTransition);
+  transition: var(--mainWhite);
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 
 .empty-search {
@@ -94,9 +111,9 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offWhite);
-  z-index: 1;
+  /* padding: 0.75rem 2rem; */
+  background: var(--mainBlack);
+  z-index: 2;
 }
 .nav-header {
   display: flex;
@@ -110,12 +127,12 @@ h6 {
 }
 .nav-icon {
   font-size: 1.5rem;
-  color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 .nav-links {
   height: 0;
   overflow: hidden;
-  transition: var(--mainTransition);
+  transition: var(--mainWhite);
   list-style-type: none;
 }
 .nav-links a {
@@ -123,18 +140,18 @@ h6 {
   text-decoration: none;
   padding: 1rem 0;
   color: var(--mainBlack);
-  transition: var(--mainTransition);
+  transition: var(--mainWhite);
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 
 .show-nav {
-  height: 100px;
+  height: 200px;
 }
 
 @media screen and (min-width: 768px) {
@@ -153,6 +170,6 @@ h6 {
   }
   .nav-links a {
     margin: 0 1rem;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
 }
