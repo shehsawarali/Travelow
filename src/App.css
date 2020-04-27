@@ -9,57 +9,8 @@ body {
   overflow-x: hidden;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primaryColor: #af9a7d;
-  --mainWhite: #fff;
-  --offWhite: #f7f7f7;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.5em;
-}
-h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1em;
-}
-h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em;
-}
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em;
-}
-h6 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em;
-}
-
 .centered-white {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -69,8 +20,8 @@ h6 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.centered-blue {
-  position: fixed;
+.centered-black {
+  position: absolute;
   top: 50%;
   left: 65%;
   transform: translate(-50%, -50%);
@@ -79,97 +30,80 @@ h6 {
   color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("./picture.jpg");
 
-.btn-primary {
-  display: inline-block;
-  text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainBlack);
-  background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
-  border: 3px solid var(--primaryColor);
-  transition: var(--mainWhite);
-  text-transform: uppercase;
-  cursor: pointer;
+  /* Set a specific height */
+  min-height: 800px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-
-.btn-primary:hover {
-  background: transparent;
-  color: var(--mainWhite);
-}
-
-.empty-search {
+.hero-text-white {
   text-align: center;
-  text-transform: capitalize;
-  margin: 2rem 0;
-  padding: 1rem;
-  letter-spacing: var(--mainSpacing);
+  position: absolute;
+  font-family: Haettenschweiler;
+  top: 50%;
+  left: 40%;
+  font-size: 55px;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text-black {
+  text-align: center;
+  position: absolute;
+  font-family: Haettenschweiler;
+  top: 50%;
+  left: 62.5%;
+  font-size: 55px;
+  transform: translate(-50%, -50%);
+  color: black;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* padding: 0.75rem 2rem; */
-  background: var(--mainBlack);
-  z-index: 2;
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
 }
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-}
-.nav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-.nav-icon {
-  font-size: 1.5rem;
-  color: var(--mainWhite);
-}
-.nav-links {
-  height: 0;
+nav {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0;
   overflow: hidden;
-  transition: var(--mainWhite);
+}
+nav ul {
+  margin: 0;
+  margin-left: 50px;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  display: inline-block;
   list-style-type: none;
 }
-.nav-links a {
-  display: block;
+nav ul li a {
+  color: white;
+  display: inline-block;
+  line-height: 1em;
+  padding: 1em 0.75em;
   text-decoration: none;
-  padding: 1rem 0;
-  color: var(--mainBlack);
-  transition: var(--mainWhite);
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
 }
-.nav-links a:hover {
-  color: var(--mainWhite);
+nav ul li:first-child {
+  margin-right: auto;
+}
+nav ul li:last-child {
+  margin-right: 20px;
 }
 
-.show-nav {
-  height: 200px;
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (min-width: 768px) {
-  .nav-btn {
-    display: none;
-  }
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-  }
-  .nav-links {
-    height: auto;
-    display: flex;
-    margin-left: 4rem;
-  }
-  .nav-links a {
-    margin: 0 1rem;
-    padding: 1rem 0;
-  }
+.logo {
+  font-size: 20px;
+  color: white;
+  font-family: Helvetica;
 }

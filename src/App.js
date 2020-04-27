@@ -9,12 +9,11 @@ import Login from "./Pages/Login";
 import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import { Route, Switch } from "react-router-dom";
-import NavBar from "./Components/navbar";
+
 
 function App() {
   return (
     <>
-      <NavBar />
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/trips" component={Trips}></Route>

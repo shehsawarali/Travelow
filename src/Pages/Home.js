@@ -27,23 +27,20 @@
 // export default home;
 
 import React from "react";
+import NavBar from "../Components/navbar";
 
 export default function Home() {
   return (
     <div>
-      <img
-        src={require("../picture.jpg")}
-        alt="Background"
-        width="1920"
-        height="800"
-      ></img>
-      <div class="centered-white">DISCOVER</div>
-      <div class="centered-blue">PAKISTAN.</div>
-      <h1> Hello </h1>
+      {/* <div className="bg-img"> */}
+
+      <div class="hero-image">
+        <NavBar />
+        <div class="hero-text-white">DISCOVER</div>
+        <div class="hero-text-black">PAKISTAN.</div>
+      </div>
+      {/* </div> */}
+      <h1>Hello</h1>
     </div>
-
-    // <div>
-
-    // </div>
   );
 }
