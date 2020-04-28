@@ -9,27 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-.centered-white {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  font-stretch: expanded;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.centered-black {
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  font-stretch: expanded;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url("./picture.jpg");
