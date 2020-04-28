@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import NavBar from "../Components/navbar";
 
-export default function Trips() {
+export default function Home() {
   return (
     <div>
-        Trips
+      <div class="hero-image">
+        <NavBar />
+      </div>
     </div>
   );
 }

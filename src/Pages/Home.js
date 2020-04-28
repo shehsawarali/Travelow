@@ -1,46 +1,44 @@
-// import React from "react";
-// // import { Link } from "react-router-dom";
-// // import Hero from "../components/Hero
-// // import container from '../App.css'
-
-// const home = () => {
-//   return (
-//     // <img
-//     //   src={require("../Baltoro_glacier_from_air.jpg")}
-//     //   alt="Background"
-//     //   width="1920"
-//     //   height="800"
-//     // ></img>
-// <div class="container">
-//   <img
-//     src={require("../picture.jpeg")}
-//     alt="Background"
-//     width="1920"
-//     height="800"
-//   ></img>
-//   <div class="centered-white">DISCOVER</div>
-//   <div class="centered-blue">PAKISTAN.</div>
-// </div>
-//   );
-// };
-
-// export default home;
-
 import React from "react";
 import NavBar from "../Components/navbar";
+import MediaCard from "../Components/featuredTrip";
+
+const Title = ({ title }) => {
+  return (
+    <div className="section-title">
+      <h4>{title}</h4>
+      <div />
+    </div>
+  );
+};
 
 export default function Home() {
   return (
     <div>
-      {/* <div className="bg-img"> */}
-
       <div class="hero-image">
         <NavBar />
         <div class="hero-text-white">DISCOVER</div>
         <div class="hero-text-black">PAKISTAN.</div>
       </div>
-      {/* </div> */}
-      <h1>Hello</h1>
+      <Title title="-FEATURED TRIPS-" />
+      <div className="organize-cards">
+        <MediaCard />
+      </div>
+      <div>
+        <img
+          src={require("../hunza.png")}
+          alt="picture2"
+          width="100%"
+          height="900px"
+        ></img>
+      </div>
+      <div className="homepage-image-import">
+        <img
+          src={require("../homePageElement.jpg")}
+          alt="picture2"
+          width="90%"
+          height="1000px"
+        ></img>
+      </div>
     </div>
   );
 }
