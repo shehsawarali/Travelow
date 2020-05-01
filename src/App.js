@@ -8,8 +8,8 @@ import ContactUs from "./Pages/ContactUs";
 import Login from "./Pages/Login";
 import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
+import UserProfile from "./Pages/UserProfile";
 import { Route, Switch } from "react-router-dom";
-
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/login/signup/user" component={SignUpUser}></Route>
         <Route exact path="/login/signup/agent" component={SignUpAgent}></Route>
+        <Route exact path="/user" component={UserProfile}></Route>
       </Switch>
     </>
   );
