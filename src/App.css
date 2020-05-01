@@ -312,3 +312,99 @@ h4 {
   border: 1px solid #494e6b;
 }
 
+.searchBar input { /*153*/
+  border: 5px solid rgb(209, 209, 209);
+  background-color: rgb(209, 209, 209);
+  width: 25%;
+  opacity: 0.7;
+  height: 40px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  backdrop-filter: blur(0.5px);
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.searchBar input:hover, .searchBar select:hover, .searchBar button:hover {
+  opacity: 0.9;
+}
+
+.searchBar button:active {
+  opacity: 1;
+  background-color: rgb(87, 86, 156);
+  color: white;
+}
+
+.searchBar select { /*153*/
+  border: 5px solid rgb(209, 209, 209);
+  background-color: rgb(209, 209, 209);
+  text-shadow: rgb(0, 0, 0);
+  width: 8.5%;
+  opacity: 0.7;
+  height: 40px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  backdrop-filter: blur(0.5px);
+  margin-left: 1%;
+  border-radius: 20px;
+  outline: none;
+}
+
+.searchBar button {
+  background-color: rgb(43, 54, 156); /* Green */
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 13.5px 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  margin-left: 1%;
+  box-sizing: border-box;
+  opacity: 0.7;
+  outline: none;
+  top: 50%;
+}
+
+.searchBar button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.searchBar button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.searchBar button:hover span {
+  padding-right: 15px;
+}
+
+.searchBar button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.searchBar {
+  text-align: center;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 450px;
+  left: 50.0%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+
