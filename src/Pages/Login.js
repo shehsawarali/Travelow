@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
+import "./Login.css";
 import NavBar from "../Components/navbar";
 
 const database = firebase.firestore();
@@ -28,17 +29,40 @@ class Login extends React.Component {
         style={{
           display: "flex",
           justifyContent: "center",
+          position: "absolute",
+          margin: "auto",
+          top: "0",
+          right: "0",
+          bottom: "0",
+          left: "0",
+          maxHeight: "53%",
         }}
       >
         <div
           style={{
             width: "20%",
-            border: "4px solid blue",
-            borderRadius: "25px",
+            border: "4px solid mediumblue",
+            backgroundColor: "whitesmoke",
+            boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
           }}
         >
+          <Link to="/">
+            <button style={{ float: "right" }} className="button-style-1">
+              X
+            </button>
+          </Link>
+
           <br></br>
-          <h3 style={{ display: "flex", justifyContent: "center" }}>Login</h3>
+          <br></br>
+
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            Login
+          </h3>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
             <form>
@@ -71,32 +95,38 @@ class Login extends React.Component {
           <br></br>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button variant="primary" onClick={this.logIn}>
+            <button className="button-style-1" onClick={this.logIn}>
               Submit
-            </Button>
+            </button>
           </div>
 
           <br></br>
-          <hr
-            style={{ height: "2px", color: "blue", borderColor: "blue" }}
-          ></hr>
-          <br></br>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            Are you a new user?
+
+          <div style={{ backgroundColor: "" }}>
+            <hr
+              style={{
+                border: "none",
+                borderTop: "1px solid mediumblue",
+              }}
+            ></hr>
+            <br></br>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              Are you a new user?
+            </div>
+            <br></br>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Link to="/login/signup/user">
+                <button className="button-style-1">Sign Up as Customer</button>
+              </Link>
+
+              <Link to="/login/signup/agent">
+                <button className="button-style-1">Sign Up as Agent</button>
+              </Link>
+            </div>
+
+            <br></br>
           </div>
-          <br></br>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="/login/signup/user">
-              <Button variant="primary">Sign Up as Customer</Button>
-            </Link>
-            <Link to="/login/signup/agent">
-              <Button variant="primary">Sign Up as Agent</Button>
-            </Link>
-          </div>
-          <br></br>
-        </div>
-        <div className="top-right">
-          <Link to="/">X</Link>
         </div>
       </div>
     );
