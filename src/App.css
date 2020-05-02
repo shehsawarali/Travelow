@@ -165,7 +165,7 @@ body {
   font-size: 15px;
 }
 nav {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 0;
   overflow: hidden;
 }
@@ -193,7 +193,7 @@ nav ul li:last-child {
   margin-right: 20px;
 }
 
-nav ul li a:hover :first-child {
+nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -256,155 +256,28 @@ h4 {
   color: black;
 }
 
-.UserProfilePic {
-  width: 150px;
-  height: 150px;
-  margin-top: 0px;
-  background-color: lightblue;
-  border-radius: 50%;
-  border: 4px solid #494e6b;
-}
-
-.AlignCenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.MyReviews {
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-.UserInfoContainer {
-  padding: 16px 16px;
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
-
-.ReviewTextContainer {
-  padding: 2px 16px;
-}
-
-.SmallUserProfilePic {
-  width: 40px;
-  height: 40px;
-  margin-top: 0px;
-  margin-right: 10px;
-  background-color: lightblue;
-  border-radius: 50%;
-  border: 1px solid #494e6b;
-}
-
-.searchBar input { /*153*/
-  border: 5px solid rgb(209, 209, 209);
-  background-color: rgb(209, 209, 209);
-  width: 25%;
-  opacity: 0.7;
-  height: 40px;
-  outline: none;
-  color: rgb(0, 0, 0);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  backdrop-filter: blur(0.5px);
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 30px;
-}
-
-.searchBar input:hover, .searchBar select:hover, .searchBar button:hover {
-  opacity: 0.9;
-}
-
-.searchBar button:active {
-  opacity: 1;
-  background-color: rgb(87, 86, 156);
-  color: white;
-}
-
-.searchBar select { /*153*/
-  border: 5px solid rgb(209, 209, 209);
-  background-color: rgb(209, 209, 209);
-  text-shadow: rgb(0, 0, 0);
-  width: 8.5%;
-  opacity: 0.7;
-  height: 40px;
-  box-sizing: border-box;
-  color: rgb(0, 0, 0);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  backdrop-filter: blur(0.5px);
-  margin-left: 1%;
-  border-radius: 20px;
-  outline: none;
-}
-
-.searchBar button {
-  background-color: rgb(43, 54, 156); /* Green */
+.button-style-1 {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: mediumblue;
   border: none;
   color: white;
-  border-radius: 30px;
-  padding: 13.5px 40px;
+  padding: 8px 10px;
   text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  margin-left: 1%;
-  box-sizing: border-box;
-  opacity: 0.7;
-  outline: none;
-  top: 50%;
-}
-
-.searchBar button span {
-  cursor: pointer;
+  text-decoration: none;
   display: inline-block;
-  position: relative;
-  transition: 0.5s;
+  font-size: 12px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.searchBar button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -15px;
-  transition: 0.5s;
+.button-style-1:hover {
+  background-color: blue;
+  cursor: pointer;
 }
 
-.searchBar button:hover span {
-  padding-right: 15px;
+.button-style-1:active {
+  background-color: lightblue;
+  cursor: pointer;
 }
-
-.searchBar button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.searchBar {
-  text-align: center;
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  top: 450px;
-  left: 50.0%;
-  font-size: 30px;
-  transform: translate(-50%, -50%);
-  color: black;
-}
-
-
