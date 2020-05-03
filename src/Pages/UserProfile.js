@@ -23,7 +23,7 @@ export default function UserProfile() {
 
         <img
           className="UserProfilePic AlignCenter"
-          src={require("../UserProfilePic.png")}
+          src={require("../Images/UserProfilePic.png")}
         ></img>
 
         <div name="user info" className="AlignCenter">

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
-import "./SignUpAgent.css";
+import "../OtherCssFiles/SignUpAgent.css";
 
 const database = firebase.firestore();
 

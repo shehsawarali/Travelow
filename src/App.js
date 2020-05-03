@@ -9,22 +9,20 @@ import Login from "./Pages/Login";
 import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/trips" component={Trips}></Route>
-        <Route exact path="/travelagents" component={TravelAgents}></Route>
-        <Route exact path="/searchresults" component={SearchResults}></Route>
-        <Route exact path="/contactus" component={ContactUs}></Route>
-        <Route exact path="/login" component={Login}></Route>
-        <Route exact path="/login/signup/user" component={SignUpUser}></Route>
-        <Route exact path="/login/signup/agent" component={SignUpAgent}></Route>
-        <Route exact path="/user" component={UserProfile}></Route>
-      </Switch>
+      <Route exact path="/" component={Home}></Route>
+      <Route exact path="/trips" component={Trips}></Route>
+      <Route exact path="/travelagents" component={TravelAgents}></Route>
+      <Route exact path="/searchresults" component={SearchResults}></Route>
+      <Route exact path="/contactus" component={ContactUs}></Route>
+      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/login/signup/user" component={SignUpUser}></Route>
+      <Route exact path="/login/signup/agent" component={SignUpAgent}></Route>
+      <Route exact path="/user" component={UserProfile}></Route>
     </>
   );
 }

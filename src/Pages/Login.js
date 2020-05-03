@@ -2,8 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
-import "./Login.css";
-import NavBar from "../Components/navbar";
+import "../OtherCssFiles/Login.css";
 
 const database = firebase.firestore();
 

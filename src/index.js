@@ -4,6 +4,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
+import "./Fonts/Jost-Light.ttf";
+import "./Fonts/Jost-Medium.ttf";
+import "./Fonts/NotoSansJP-Medium.otf";
+import "./Fonts/NotoSansJP-Light.otf";
 
 // const firebase = require("firebase");
 // require("firebase/firestore");

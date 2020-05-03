@@ -4,7 +4,7 @@ import MediaCard from "../Components/featuredTrip";
 
 const Title = ({ title }) => {
   return (
-    <div className="section-title">
+    <div className="section-title" className="titleFont">
       <h4>{title}</h4>
       <div />
     </div>
@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <div>
         <img
-          src={require("../hunza.png")}
+          src={require("../Images/hunza.png")}
           alt="picture2"
           width="100%"
           height="900px"
@@ -33,7 +33,7 @@ export default function Home() {
       </div>
       <div className="homepage-image-import">
         <img
-          src={require("../homePageElement.jpg")}
+          src={require("../Images/homePageElement.jpg")}
           alt="picture2"
           width="90%"
           height="1000px"

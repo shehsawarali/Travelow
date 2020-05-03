@@ -7,6 +7,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
+
+
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 320,
@@ -26,7 +29,7 @@ export default function MediaCard() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={require("../kalam.png")}
+              image={require("../Images/kalam.png")}
               title="Kalam"
             />
             <CardContent>
@@ -46,7 +49,7 @@ export default function MediaCard() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={require("../nathiagali.png")}
+              image={require("../Images/nathiagali.png")}
               title="Kalam"
             />
             <CardContent>
@@ -66,7 +69,7 @@ export default function MediaCard() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={require("../bhawalpur.png")}
+              image={require("../Images/bhawalpur.png")}
               title="Kalam"
             />
             <CardContent>
