@@ -3,6 +3,27 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export default class navBar extends Component {
+  
+//SHEHSAWAR
+  constructor(props){
+    super(props);
+    this.state = {
+      display: null
+    }
+  }
+  
+  componentDidMount(){
+    firebase.auth().onAuthStateChanged((obj) => {
+      if(obj) {
+        this.setState({display: obj.email});
+      }
+      else{
+        this.setState({display: "Login/Signup"})
+      }
+    })
+  }
+//   SHEHSAWAR
+  
   render() {
     return (
       <nav>
@@ -22,7 +43,9 @@ export default class navBar extends Component {
             <Link to="/contactus">CONTACT US</Link>
           </li>
           <li>
-            <Link to="/login">LOGIN/SIGN UP</Link>
+      //SHEHSAWAR
+            <Link to="/login">{this.state.display}</Link>
+      //SHEHSAWAR
           </li>
         </ul>
       </nav>
