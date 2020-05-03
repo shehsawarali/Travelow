@@ -47,9 +47,7 @@ export default class navBar extends Component {
             <Link to="/contactus">CONTACT US</Link>
           </li>
           <li>
-      //SHEHSAWAR
             <Link to="/login">{this.state.display}</Link>
-      //SHEHSAWAR
           </li>
         </ul>
       </nav>
