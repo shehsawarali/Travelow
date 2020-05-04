@@ -11,20 +11,14 @@ export default class navBar extends Component {
 //SHEHSAWAR
   constructor(props){
     super(props);
-    this.state = {
-      display: null
-    }
+    this.state = props.state;
   }
-  
-  componentDidMount(){
-    firebase.auth().onAuthStateChanged((obj) => {
-      if(obj) {
-        this.setState({display: obj.email});
-      }
-      else{
-        this.setState({display: "Login/Signup"})
-      }
-    })
+
+  componentWillReceiveProps(nextProps) {
+    // You don't have to do this check first, but it can help prevent an unneeded render
+    if (nextProps.state !== this.state) {
+      this.setState(nextProps.state);
+    }
   }
 //   SHEHSAWAR
   
