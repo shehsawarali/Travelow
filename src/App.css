@@ -47,8 +47,40 @@ body {
   src: local("NotoSansJP"), url(./Fonts/NotoSansJP-Light.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "Rochester";
+  src: local("Rochester"), url(./Fonts/Rochester-Regular.ttf) format("truetype");
+}
+
 .titleFont {
   font-family: "Jost";
+}
+
+.tripTitleFont {
+  font-family: "Rochester";
+  letter-spacing: 1px;
+  font-size: 32px;
+}
+
+.tripAgentFont {
+  font-family: "Jost";
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.priceTag {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: black;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 3px;
+  width: 60px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
 }
 
 .hero-image {
@@ -262,14 +294,18 @@ h4 {
   letter-spacing: 2px;
 }
 
-.organize-cards {
-  /* padding: ; */
-}
-
 .column {
-  float: left;
-  width: 25%;
-  /* padding: ; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  flex: 0 1 50%;
+  box-sizing: border-box;
 }
 
 .top-left {
@@ -387,29 +423,32 @@ h4 {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   top: 450px;
-  left: 50.0%;
+  left: 50%;
   font-size: 30px;
   transform: translate(-50%, -50%);
   color: black;
 }
 
-.searchBar input { /*153*/
+.searchBar input {
+  /*153*/
   border: 5px solid rgb(209, 209, 209);
   background-color: rgb(209, 209, 209);
   width: 25%;
-  opacity: 0.7;
+  opacity: 0.75;
   height: 40px;
   outline: none;
-  color: rgb(0, 0, 0);
+  color: black(0, 0, 0);
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   backdrop-filter: blur(0.5px);
   text-align: center;
   box-sizing: border-box;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
-.searchBar input:hover, .searchBar select:hover, .searchBar button:hover {
+.searchBar input:hover,
+.searchBar select:hover,
+.searchBar button:hover {
   opacity: 0.9;
 }
 
@@ -419,7 +458,8 @@ h4 {
   color: white;
 }
 
-.searchBar select { /*153*/
+.searchBar select {
+  /*153*/
   border: 5px solid rgb(209, 209, 209);
   background-color: rgb(209, 209, 209);
   text-shadow: rgb(0, 0, 0);
@@ -429,25 +469,24 @@ h4 {
   box-sizing: border-box;
   color: rgb(0, 0, 0);
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   backdrop-filter: blur(0.5px);
   margin-left: 1%;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
 }
 
 .searchBar button {
-  background-color: rgb(43, 54, 156); /* Green */
+  background-color: #0f1daf; /* Green */
   border: none;
   color: white;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 13.5px 40px;
   text-align: center;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   margin-left: 1%;
   box-sizing: border-box;
-  opacity: 0.7;
   outline: none;
   top: 50%;
 }
@@ -460,7 +499,7 @@ h4 {
 }
 
 .searchBar button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;

@@ -7,15 +7,38 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-
-
+const featured = [
+  {
+    id: 1,
+    img: "../Images/kalam.png",
+    alt: "Kalam Valley",
+    title: "Kalam",
+    subtitle: "TRAVELIA",
+  },
+  {
+    id: 2,
+    img: "../Images/nathiagali.png",
+    alt: "Nathiagali",
+    title: "Nathiagali",
+    subtitle: "Bestway Travels",
+  },
+  {
+    id: 3,
+    img: "../Images/bhawalpur.png",
+    alt: "Bhawalpur ",
+    title: "Bhawalpur",
+    subtitle: "Beydar Travels",
+  },
+];
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 320,
+    width: "340px",
+    variant: 24,
+    height: "340px",
   },
   media: {
-    height: 230,
+    height: "240px",
   },
 });
 
@@ -23,66 +46,54 @@ export default function MediaCard() {
   const classes = useStyles();
 
   return (
-    <div className="row">
+    <>
       <div className="column">
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/kalam.png")}
-              title="Kalam"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Kalam
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Travelia
-              </Typography>
-            </CardContent>
-          </CardActionArea>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/kalam.png")}
+            title="Kalam"
+          ></CardMedia>
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Kalam</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">TRAVELIA</div>
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/nathiagali.png")}
+            title="Nathiagali"
+          />
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Nathiagali</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">BESTWAY TRAVELS</div>
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/bhawalpur.png")}
+            title="Bhawalpur"
+          />
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Bhawalpur</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">BEYDAR TRAVELS</div>
+            </Typography>
+          </CardContent>
         </Card>
       </div>
-
-      <div className="column">
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/nathiagali.png")}
-              title="Kalam"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Nathiagali
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Bestway Travels
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </div>
-
-      <div className="column">
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/bhawalpur.png")}
-              title="Kalam"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Bhawalpur
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Beydar Travels
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </div>
-    </div>
+    </>
   );
 }
