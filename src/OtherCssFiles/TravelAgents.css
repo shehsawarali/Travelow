@@ -1,0 +1,21 @@
+  
+.root {
+    flex-grow: 2px;
+  }
+  
+  .paper {
+    padding: 10px; /*theme.spacing(2);*/
+    margin: auto;
+    max-width: 500px;
+  }
+  
+  .image {
+    width: 128px;
+    height: 128px;
+  }
+  
+  .img {
+    margin: none;
+    max-width: 100%;
+    max-height: 100%;
+  }

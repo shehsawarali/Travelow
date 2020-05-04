@@ -1,0 +1,70 @@
+.box {
+    width: 220px;
+    padding: 10px;
+    border: 3px  #585a66;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+  }
+
+  .boxpadding {
+    padding: 5px 20px 5px 20px;
+  }
+
+  .TripTop {
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .TripTop1 {
+    padding: 1px 10px 2px 45px;
+    display: flex;
+    align-items: center;
+  }
+
+  .TripImage1 {
+    height: 270px;
+    width: 500px;
+    padding: 10px 40px 10px 250px;
+  
+  }
+  .imgg{
+      height: 38px;
+      width: 38px;
+  }
+  
+  .barr {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .pair {
+    display: flex;
+    align-items: center;
+  }
+
+  .backgrougImage {
+    height: 280px;
+    width: 850px;
+    padding: 35px 1px 1px 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+  .AccomodationImage
+  {
+    position: absolute;
+    top: 60px;
+    left: 80px;
+  }
