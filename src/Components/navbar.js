@@ -11,20 +11,14 @@ export default class navBar extends Component {
 //SHEHSAWAR
   constructor(props){
     super(props);
-    this.state = {
-      display: null
-    }
+    this.state = props.state;
   }
-  
-  componentDidMount(){
-    firebase.auth().onAuthStateChanged((obj) => {
-      if(obj) {
-        this.setState({display: obj.email});
-      }
-      else{
-        this.setState({display: "Login/Signup"})
-      }
-    })
+
+  componentWillReceiveProps(nextProps) {
+    // You don't have to do this check first, but it can help prevent an unneeded render
+    if (nextProps.state !== this.state) {
+      this.setState(nextProps.state);
+    }
   }
 //   SHEHSAWAR
   
@@ -38,13 +32,13 @@ export default class navBar extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/trips">TRIPS</Link>
+            <Link to="/trips">Trips</Link>
           </li>
           <li>
-            <Link to="/travelagents">TRAVEL AGENTS</Link>
+            <Link to="/travelagents">Travel Agents</Link>
           </li>
           <li>
-            <Link to="/contactus">CONTACT US</Link>
+            <Link to="/contactus">Contact Us</Link>
           </li>
           <li>
             <Link to="/login">{this.state.display}</Link>
