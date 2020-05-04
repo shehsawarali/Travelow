@@ -46,6 +46,7 @@ class App extends React.Component {
       <>
         <Route exact path="/"  render={(props) => <Home {...props} state={this.state}/>}></Route>
         <Route exact path="/trips" render={(props) => <Trips {...props} state={this.state}/>}></Route>
+        <Route exact path="/tripsdetails" render={(props)=> <TripDetails {...props} state={this.state}/>}></Route>
         <Route exact path="/travelagents" render={(props) => <TravelAgents {...props} state={this.state}/>}></Route>
         <Route exact path="/searchresults" render={(props) => <SearchResults {...props} state={this.state}/>}></Route>
         <Route exact path="/contactus" render={(props) => <ContactUs {...props} state={this.state}/>}></Route>
