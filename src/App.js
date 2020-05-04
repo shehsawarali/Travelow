@@ -12,22 +12,6 @@ import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
 import { Route } from "react-router-dom";
 
-function App() {
-  return (
-    <>
-      <Route exact path="/" component={Home}></Route>
-      <Route exact path="/trips" component={Trips}></Route>
-      <Route exact path="/tripsdetails" component={TripDetails}></Route>
-      <Route exact path="/travelagents" component={TravelAgents}></Route>
-      <Route exact path="/searchresults" component={SearchResults}></Route>
-      <Route exact path="/contactus" component={ContactUs}></Route>
-      <Route exact path="/login" component={Login}></Route>
-      <Route exact path="/login/signup/user" component={SignUpUser}></Route>
-      <Route exact path="/login/signup/agent" component={SignUpAgent}></Route>
-      <Route exact path="/user" component={UserProfile}></Route>
-    </>
-  );
-}
 /*SHEHSAWAR*/
 import firebase from './config/fire';
 
