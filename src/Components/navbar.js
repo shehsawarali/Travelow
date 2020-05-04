@@ -32,13 +32,13 @@ export default class navBar extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/trips">TRIPS</Link>
+            <Link to="/trips">Trips</Link>
           </li>
           <li>
-            <Link to="/travelagents">TRAVEL AGENTS</Link>
+            <Link to="/travelagents">Travel Agents</Link>
           </li>
           <li>
-            <Link to="/contactus">CONTACT US</Link>
+            <Link to="/contactus">Contact Us</Link>
           </li>
           <li>
             <Link to="/login">{this.state.display}</Link>
