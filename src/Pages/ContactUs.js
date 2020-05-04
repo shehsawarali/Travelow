@@ -5,6 +5,7 @@ import firebase from "../config/fire";
 const database = firebase.firestore();
 
 class ContactUs extends React.Component {
+/*SHEHSAWAR*/  
   store() {
     const emailaddress = document.getElementById("email").value;
     const firstName = document.getElementById("firstName").value;
@@ -25,12 +26,25 @@ class ContactUs extends React.Component {
         console.error(error);
       });
   }
+  
+  constructor(props){
+    super(props);
+    this.state = props.state;
+  }
 
+  componentWillReceiveProps(nextProps) {
+    // You don't have to do this check first, but it can help prevent an unneeded render
+    if (nextProps.state !== this.state) {
+      this.setState(nextProps.state);
+    }
+  }
+/*SHEHSAWAR*/
+ 
   render() {
     return (
       <div>
         <div className="hero-image-contact">
-          <NavBar />
+          <NavBar state={this.state}/>
         </div>
 
         <div className="text">CONTACT US</div>
