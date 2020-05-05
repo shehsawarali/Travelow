@@ -6,15 +6,20 @@ class Card extends Component {
         return (
           <div >
             <div class= "heading">
-              Trip to hunza 
+              Trip Name
             </div>
-            <div class= "tripby">
-              by travelia<br></br>
+
+          <div className="pair">
+          <div class= "tripby">
+              Company Name<br></br>
             <img
             className="SmallUserProfilePic"
             src={require("../Images/TravelAgent.jpg")}
           ></img>
             </div>
+
+          </div>
+            
             <div class="tripinfo">
               Here we will put trip info...
             </div>
