@@ -1,9 +1,8 @@
 import React from "react";
 import firebase from "../config/fire";
 import { Link } from "react-router-dom";
-import "../OtherCssFiles/SignUpUser.css";
 import Background from "../Images/blurredMountains.png";
-import { Hidden } from "@material-ui/core";
+import "../OtherCssFiles/SignUpUser.css";
 
 const database = firebase.firestore();
 const usersCollection = database.collection("Customer");
