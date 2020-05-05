@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
 import "../OtherCssFiles/Login.css";
+import Background from "../Images/blurredMountains.png";
 
 const database = firebase.firestore();
 
@@ -29,20 +30,26 @@ class Login extends React.Component {
           display: "flex",
           justifyContent: "center",
           position: "absolute",
-          margin: "auto",
           top: "0",
           right: "0",
           bottom: "0",
           left: "0",
-          maxHeight: "53%",
+          maxHeight: "100%",
+          backgroundColor: "lightblue",
+          backgroundImage: `url(${Background})`,
         }}
       >
         <div
           style={{
+            position: "absolute",
             width: "20%",
-            border: "4px solid mediumblue",
+            border: "1px solid black",
+            borderRadius: "10px 10px 10px 10px",
             backgroundColor: "whitesmoke",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
+            top: "20%",
+            bottom: "25%",
+            minHeight: "400px",
           }}
         >
           <Link to="/">
