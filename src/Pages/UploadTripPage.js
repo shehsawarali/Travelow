@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
+import UploadForm from "../Components/Form";
+import CheckBox from "../Components/CheckBox";
+import Button from "@material-ui/core/Button";
 
 class UploadTripPage extends Component {
   constructor(props) {
@@ -21,7 +24,14 @@ class UploadTripPage extends Component {
           <NavBar state={this.state} />
           <div className="text">New Trip</div>
         </div>
-        
+        <div className="formFormatting">
+          <UploadForm />
+        </div>
+        <h3>Trip Type:</h3>
+        <CheckBox />
+        <Button variant="contained" color="primary">
+          Submit
+        </Button>
       </>
     );
   }
