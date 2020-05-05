@@ -3,8 +3,7 @@ import NavBar from "../Components/navbar";
 import SearchResultbox from "../Components/Searchcard";
 
 export default class Trips extends React.Component {
-
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = props.state;
   }
@@ -16,12 +15,15 @@ export default class Trips extends React.Component {
     }
   }
 
+
   render(){
     return (
     <div>
       <div class="hero-image-contact">
-        <NavBar state={this.state}/>
+      <NavBar state={this.state} />
+      <div className="text">All Trips</div>
       </div>
+
 
       <div className="MyReviews">
         <SearchResultbox />
