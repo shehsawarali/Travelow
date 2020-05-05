@@ -6,25 +6,13 @@ import UserReviewCard from "../Components/UserReview";
 import "../OtherCssFiles/Tripdetails.css";
 import { render } from "@testing-library/react";
 
-export default class Tripdetails extends React.Component {
+export default function Home() {
 
-  constructor(props) {
-    super(props);
-    this.state = props.state;
-  }
-
-  componentWillReceiveProps(nextProps) {
-    // You don't have to do this check first, but it can help prevent an unneeded render
-    if (nextProps.state !== this.state) {
-      this.setState(nextProps.state);
-    }
-  }
-
-  render(){
-    return (
+ 
+  return (
     <div>
       <div class="hero-image-contact">
-        <NavBar state={this.state} />
+      
         <div className="text">Trip Name</div>
         <div className="text1">NOTE: contact travel agent directly</div>
       </div>
@@ -53,5 +41,4 @@ export default class Tripdetails extends React.Component {
       </div>
     </div>
     );
-  }
 }

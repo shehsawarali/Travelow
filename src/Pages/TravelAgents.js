@@ -7,8 +7,9 @@ Shifted styling to new css file TravelAgents.css.
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
 import "../OtherCssFiles/TravelAgents.css";
+import TravelAgentt from "../Components/TravelAgentCard"
 
-class TravelAgents extends Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.state;
@@ -24,12 +25,18 @@ class TravelAgents extends Component {
   render() {
     return (
       <div>
-        <div class="hero-image">
+        <div class="hero-image-contact">
           <NavBar state={this.state} />
+          <div className="text">All travel agents</div>
         </div>
+
+        <div className="MyReviews1">
+        <TravelAgentt />
       </div>
+
+      </div>
+      
     );
   }
 }
 
-export default TravelAgents;

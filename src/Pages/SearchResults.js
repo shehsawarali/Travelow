@@ -25,7 +25,7 @@ export default class SearchResults extends React.Component {
           <div className="text">Search results</div>
         </div>
 
-        <div className="MyReviews">
+        <div className="MyReviews1">
           <SearchResultbox />
           <SearchResultbox />
           <SearchResultbox />

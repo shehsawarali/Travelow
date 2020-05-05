@@ -33,6 +33,10 @@
       height: 38px;
       width: 38px;
   }
+  .imgg2{
+    height: 50px;
+    width: 50px;
+}
   
   .barr {
     display: flex;
@@ -42,7 +46,16 @@
     text-align: center;
     justify-content: space-between;
   }
+  .barr2 {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    justify-content: space-between;
+  }
 
+  
   .pair {
     display: flex;
     align-items: center;
