@@ -5,6 +5,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     align-items: center;
+    text-decoration: none;
     
   }
     /* On mouse-over, add a deeper shadow */
@@ -18,17 +19,20 @@
     padding: 5px 10px;
     align-items: center;
     display: flex;
+    text-decoration: none;
   }
   
   .TripImage {
-      height: 130px;
-      width: 130px;
+      height: 150px;
+      width: 160px;
       padding: 1px 40px 10px 10px;
     
   }
 
   .text{
     font-family:Helvetica;
+    text-decoration: none;
+    display: inline-block;
   }
   .heading {
       font-size: 30px;
@@ -44,7 +48,18 @@
     font-size: 25px;
   }
 
-  .tripinfo {
+  .tripinfo1 {
     font-size: 15px;
+  }
+  .tripinfo1 {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+
+  
+  .pair {
+    display: flex;
+    align-items: center;
   }
 
