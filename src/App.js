@@ -10,54 +10,97 @@ import Login from "./Pages/Login";
 import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
+import UploadTripPage from "./Pages/UploadTripPage";
 import { Route } from "react-router-dom";
 
 /*SHEHSAWAR*/
-import firebase from './config/fire';
+import firebase from "./config/fire";
 
 class App extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       useremail: null,
-      display: "Login/Signup"
-    }
+      display: "Login/Signup",
+    };
     this.authlistener.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.authlistener();
   }
 
-  authlistener(){
+  authlistener() {
     firebase.auth().onAuthStateChanged((obj) => {
-      if(obj) {
-        this.setState({useremail: obj.email, display: obj.email});
+      if (obj) {
+        this.setState({ useremail: obj.email, display: obj.email });
+      } else {
+        this.setState({ useremail: null, display: "Login/Signup" });
       }
-      else{
-        this.setState({useremail: null, display: "Login/Signup"})
-      }
-    })
+    });
   }
 
-  render(){
+  render() {
     return (
       <>
-        <Route exact path="/"  render={(props) => <Home {...props} state={this.state}/>}></Route>
-        <Route exact path="/trips" render={(props) => <Trips {...props} state={this.state}/>}></Route>
-        <Route exact path="/tripsdetails" render={(props)=> <TripDetails {...props} state={this.state}/>}></Route>
-        <Route exact path="/travelagents" render={(props) => <TravelAgents {...props} state={this.state}/>}></Route>
-        <Route exact path="/searchresults" render={(props) => <SearchResults {...props} state={this.state}/>}></Route>
-        <Route exact path="/contactus" render={(props) => <ContactUs {...props} state={this.state}/>}></Route>
-        <Route exact path="/login" render={(props) => <Login {...props} state={this.state}/>}></Route>
-        <Route exact path="/login/signup/user" render={(props) => <SignUpUser {...props} state={this.state}/>}></Route>
-        <Route exact path="/login/signup/agent" render={(props) => <SignUpAgent {...props} state={this.state}/>}></Route>
-        <Route exact path="/user" render={(props) => <UserProfile {...props} state={this.state}/>}></Route>
+        <Route
+          exact
+          path="/"
+          render={(props) => <Home {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/trips"
+          render={(props) => <Trips {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/tripdetails"
+          render={(props) => <TripDetails {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/travelagents"
+          render={(props) => <TravelAgents {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/searchresults"
+          render={(props) => <SearchResults {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/contactus"
+          render={(props) => <ContactUs {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/login"
+          render={(props) => <Login {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/login/signup/user"
+          render={(props) => <SignUpUser {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/login/signup/agent"
+          render={(props) => <SignUpAgent {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/user"
+          render={(props) => <UserProfile {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/uploadtrippage"
+          render={(props) => <UploadTripPage {...props} state={this.state} />}
+        ></Route>
       </>
     );
   }
-  
 }
 
 export default App;

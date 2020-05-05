@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../Components/navbar";
 import MediaCard from "../Components/featuredTrip";
 import Search from "../Components/Search";
+import TopAgents from "../Components/topAgents";
 
 const Title = ({ title }) => {
   return (
@@ -13,8 +14,7 @@ const Title = ({ title }) => {
 };
 
 export default class Home extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = props.state;
   }
@@ -26,14 +26,16 @@ export default class Home extends React.Component {
     }
   }
 
-  render(){
+  render() {
     return (
       <div>
         <div class="hero-image">
-          <NavBar state={this.state}/>
+          <NavBar state={this.state} />
           <div class="hero-text-white">DISCOVER</div>
           <div class="hero-text-black">PAKISTAN.</div>
-          <div position="relative"><Search/></div>
+          <div position="relative">
+            <Search />
+          </div>
         </div>
         <Title title="-FEATURED TRIPS-" />
         <div className="organize-cards">
@@ -47,6 +49,7 @@ export default class Home extends React.Component {
             height="900px"
           ></img>
         </div>
+        <TopAgents />
         <div className="homepage-image-import">
           <img
             src={require("../Images/homePageElement.jpg")}

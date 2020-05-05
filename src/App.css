@@ -69,18 +69,22 @@ body {
 }
 
 .priceTag {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  background-color: black;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 3px;
-  width: 60px;
-  border-radius: 3px;
+  background-color: white;
+  font-size: 18px;
+  width: 90px;
+  height: 24px;
   text-align: center;
-  color: white;
+  color: #ffa500;
+  margin-right: -5px;
+  margin-left: auto;
+  margin-top: -98px;
+  padding: 4px 2px 2px 2px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxShadow {
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-image {
@@ -162,9 +166,7 @@ body {
   color: black;
 }
 
-
 /* Ayesha   */
-
 
 .text-body1 {
   text-align: left;
@@ -320,7 +322,7 @@ h4 {
 }
 
 .column {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -462,7 +464,7 @@ h4 {
   opacity: 0.75;
   height: 40px;
   outline: none;
-  color: black(0, 0, 0);
+  color: black;
   font-family: Arial, sans-serif;
   font-size: 14px;
   backdrop-filter: blur(0.5px);
@@ -539,4 +541,99 @@ h4 {
 .searchBar button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.agentsContainer {
+  width: 80%;
+  height: 200px;
+  margin: 80px auto 60px auto;
+  padding: 20px;
+}
+
+.textContainer {
+  color: rgb(26, 56, 87);
+  font-family: "NotoSansJP";
+  width: 31%;
+  height: auto;
+  font-size: 30px;
+}
+
+.subtextContainer {
+  color: rgb(26, 56, 87);
+  font-family: "Jost";
+  width: 40%;
+  height: auto;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.agentsContainer .agentBox {
+  width: 17%;
+  height: 220px;
+  margin-left: 55%;
+  margin-top: -16%;
+}
+
+.agentsContainer .agentBox2 {
+  width: 17%;
+  height: 220px;
+  margin-left: 75%;
+  margin-top: -19.1%;
+}
+
+.agentLogo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #494e6b;
+  background-image: url("./Images/agentlogo1.png");
+  background-position: center;
+  background-size: contain;
+  margin-left: 50px;
+  display: block;
+}
+
+.agentLogo2 {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #494e6b;
+  background-image: url("./Images/agentlogo2.png");
+  background-color: white;
+  background-position: center;
+  background-size: contain;
+  margin-left: 50px;
+  display: block;
+}
+
+.agentName {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  margin-left: 28%;
+  margin-top: 12%;
+}
+
+.agentName2 {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  margin-left: 22%;
+  margin-top: 12%;
+}
+
+.checked {
+  color: #4e89f8;
+  margin-left: 5%;
+}
+
+.rating {
+  color: #4e89f8;
+  font-size: 20px;
+  font-family: "Gill Sans";
+  margin-left: 37%;
+  margin-top: 10%;
+}
+
+.tripAddingContainer {
 }

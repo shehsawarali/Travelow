@@ -1,14 +1,7 @@
-/*
-04/05/2020 - 11:30am:
-Danyal changed react hook to class component.
-Shifted styling to new css file TravelAgents.css.
-*/
-
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
-import "../OtherCssFiles/TravelAgents.css";
 
-class TravelAgents extends Component {
+class UploadTripPage extends Component {
   constructor(props) {
     super(props);
     this.state = props.state;
@@ -23,13 +16,15 @@ class TravelAgents extends Component {
 
   render() {
     return (
-      <div>
-        <div class="hero-image">
+      <>
+        <div class="hero-image-contact">
           <NavBar state={this.state} />
+          <div className="text">New Trip</div>
         </div>
-      </div>
+        
+      </>
     );
   }
 }
 
-export default TravelAgents;
+export default UploadTripPage;
