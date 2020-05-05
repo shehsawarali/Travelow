@@ -53,11 +53,19 @@ class App extends React.Component {
           path="/trips"
           render={(props) => <Trips {...props} state={this.state} />}
         ></Route>
+       {/* Ayesha */}
         <Route
           exact
           path="/tripdetails"
           render={(props) => <TripDetails {...props} state={this.state} />}
         ></Route>
+
+        <Route
+          exact
+          path="/travelagentprofilepublic"
+          render={(props) => <TravelAgentProfilePublic {...props} state={this.state} />}
+        ></Route>
+        
         <Route
           exact
           path="/travelagents"
