@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
 import "../OtherCssFiles/SignUpAgent.css";
+import Background from "../Images/blurredMountains.png";
 
 const database = firebase.firestore();
 
@@ -52,20 +53,24 @@ class SignUpAgent extends React.Component {
           display: "flex",
           justifyContent: "center",
           position: "absolute",
-          margin: "auto",
           top: "0",
           right: "0",
           bottom: "0",
           left: "0",
-          maxHeight: "85%",
+          maxHeight: "100%",
+          backgroundColor: "lightblue",
+          backgroundImage: `url(${Background})`,
         }}
       >
         <div
           style={{
+            position: "absolute",
             width: "20%",
             border: "4px solid mediumblue",
             backgroundColor: "whitesmoke",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
+            top: "5%",
+            bottom: "5%",
           }}
         >
           <Link to="/">
