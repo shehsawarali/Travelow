@@ -48,6 +48,7 @@ class Login extends React.Component {
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
             top: "20%",
             bottom: "22%",
+            minHeight: "400px",
           }}
         >
           <Link to="/">

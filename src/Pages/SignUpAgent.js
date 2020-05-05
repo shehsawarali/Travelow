@@ -71,6 +71,7 @@ class SignUpAgent extends React.Component {
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
             top: "5%",
             bottom: "5%",
+            minHeight: "500px",
           }}
         >
           <Link to="/">
