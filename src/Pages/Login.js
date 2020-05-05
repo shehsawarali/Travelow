@@ -43,11 +43,12 @@ class Login extends React.Component {
           style={{
             position: "absolute",
             width: "20%",
-            border: "4px solid mediumblue",
+            border: "1px solid black",
+            borderRadius: "10px 10px 10px 10px",
             backgroundColor: "whitesmoke",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
             top: "20%",
-            bottom: "22%",
+            bottom: "25%",
             minHeight: "400px",
           }}
         >
@@ -114,7 +115,6 @@ class Login extends React.Component {
                 borderTop: "1px solid mediumblue",
               }}
             ></hr>
-            <br></br>
             <br></br>
 
             <div style={{ display: "flex", justifyContent: "center" }}>

@@ -3,6 +3,7 @@ import firebase from "../config/fire";
 import { Link } from "react-router-dom";
 import "../OtherCssFiles/SignUpUser.css";
 import Background from "../Images/blurredMountains.png";
+import { Hidden } from "@material-ui/core";
 
 const database = firebase.firestore();
 const usersCollection = database.collection("Customer");
@@ -56,14 +57,16 @@ class SignUpUser extends React.Component {
       >
         <div
           style={{
-            position: "absolute",
+            position: "relative",
             width: "20%",
-            border: "4px solid mediumblue",
+            border: "1px solid black",
+            borderRadius: "10px 0px 0px 10px",
             backgroundColor: "whitesmoke",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
-            top: "5%",
-            bottom: "5%",
-            minHeight: "500px",
+            marginTop: "3%",
+            marginBottom: "0%",
+            minHeight: "640px",
+            maxHeight: "640px",
           }}
         >
           <Link to="/">
@@ -80,23 +83,6 @@ class SignUpUser extends React.Component {
           </h3>
 
           <br></br>
-
-          {/*
-          <h5>Sign Up As:</h5>
-
-          <div class="radio">
-            <label>
-              <input type="radio" name="optradio" checked />
-              Customer
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optradio" />
-              Travel Agent
-            </label>
-          </div>
-        */}
 
           <div style={{ display: "flex", justifyContent: "center" }}>
             <form>
@@ -215,6 +201,28 @@ class SignUpUser extends React.Component {
           </div>
 
           <br></br>
+        </div>
+        <div
+          style={{
+            position: "relative",
+            width: "20%",
+            border: "1px solid black",
+            borderRadius: "0px 10px 10px 0px",
+            boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
+            top: "0%",
+            bottom: "0",
+            marginTop: "3%",
+            marginBottom: "3%",
+            overflow: "Hidden",
+            minHeight: "640px",
+            maxHeight: "640px",
+          }}
+        >
+          <img
+            className=" "
+            style={{ height: "100%" }}
+            src={require("../Images/mainBackground.jpg")}
+          ></img>
         </div>
       </div>
     );
