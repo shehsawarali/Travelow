@@ -25,7 +25,7 @@ export default class UserProfile extends React.Component {
         <div class="hero-image-contact">
           <NavBar state={this.state}/>
           <img
-            className="UserProfilePic AlignCenter"
+            className="TravelAgentProfilePicture "
             src={require("../Images/Travel agency.png")}
           ></img>
 
@@ -40,7 +40,7 @@ export default class UserProfile extends React.Component {
           </div>
 
           <img
-            className="ratinggg"
+            className="starrating"
             src={require("../Images/5stars.png")}
           ></img>
 

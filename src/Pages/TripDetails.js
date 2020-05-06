@@ -8,18 +8,16 @@ import { render } from "@testing-library/react";
 
 export default function Home() {
 
- 
   return (
     <div>
       <div class="hero-image-contact">
-      
         <div className="text">Trip Name</div>
         <div className="text1">NOTE: contact travel agent directly</div>
       </div>
 
-      <div className="TripTop">
+      <div className="TripTop" >
         <img
-          className="TripImage1"
+          className="TripImage2"
           src={require("../Images/bhawalpur.png")}
         ></img>
         <TripData />
