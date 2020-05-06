@@ -9,6 +9,7 @@ export default function topAgents() {
         You can find ratings and reviews of different travel agents by their
         very own customers.
       </div>
+      
       <div className="agentBox">
         <div className="agentLogo">
         </div>
@@ -18,6 +19,7 @@ export default function topAgents() {
         <div class="rating">4.5
         <span class="fa fa-star checked"></span></div>
       </div>
+
       <div className="agentBox2">
       <div className="agentLogo2">
         </div>

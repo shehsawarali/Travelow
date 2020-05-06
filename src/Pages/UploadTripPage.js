@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
 import UploadForm from "../Components/Form";
-import CheckBox from "../Components/CheckBox";
+// import CheckBox from "../Components/CheckBox";
 import Button from "@material-ui/core/Button";
 
 class UploadTripPage extends Component {
@@ -27,8 +27,7 @@ class UploadTripPage extends Component {
         <div className="formFormatting">
           <UploadForm />
         </div>
-        <h3>Trip Type:</h3>
-        <CheckBox />
+        {/* <CheckBox /> */}
         <Button variant="contained" color="primary">
           Submit
         </Button>

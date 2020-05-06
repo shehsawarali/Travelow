@@ -1,26 +1,27 @@
 import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
-
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 // state = {
 //     date: new Date(),
 //   };
 //   onChange = (date) => this.setState({ date });
 
 class UploadForm extends Component {
-//   constructor() {
-//       super()
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
+  //   constructor() {
+  //       super()
+  //     this.handleSubmit = this.handleSubmit.bind(this);
+  //   }
 
-//   handleSubmit(event) {
-//     event.preventDefault();
-//     const data = new FormData(event.target);
+  //   handleSubmit(event) {
+  //     event.preventDefault();
+  //     const data = new FormData(event.target);
 
-//     fetch("/api/form-submit-url", {
-//       method: "POST",
-//       body: data,
-//     });
-//   }
+  //     fetch("/api/form-submit-url", {
+  //       method: "POST",
+  //       body: data,
+  //     });
+  //   }
 
   render() {
     return (
@@ -85,9 +86,61 @@ class UploadForm extends Component {
             variant="outlined"
           />
         </div>
+        <h3>Trip Type:</h3>
+        <CheckBox />
       </form>
     );
   }
+}
+
+function CheckBox() {
+  const [state, setState] = React.useState({
+    checkedA: false,
+    checkedB: false,
+    checkedC: false,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  return (
+    <div>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={state.checkedA}
+            onChange={handleChange}
+            name="checkedA"
+            color="primary"
+          />
+        }
+        label="Family"
+      />
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={state.checkedB}
+            onChange={handleChange}
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label="Extreme"
+      />
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={state.checkedC}
+            onChange={handleChange}
+            name="checkedC"
+            color="primary"
+          />
+        }
+        label="Camping"
+      />
+    </div>
+  );
 }
 
 export default UploadForm;

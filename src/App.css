@@ -585,7 +585,7 @@ h4 {
   margin-top: -19.1%;
 }
 
-.agentLogo {
+.agentsContainer .agentLogo {
   width: 85px;
   height: 85px;
   border-radius: 50%;
@@ -598,7 +598,7 @@ h4 {
   display: block;
 }
 
-.agentLogo2 {
+.agentsContainer .agentLogo2 {
   width: 85px;
   height: 85px;
   border-radius: 50%;
@@ -612,31 +612,30 @@ h4 {
   display: block;
 }
 
-.agentName {
+.agentsContainer .agentName {
   font-family: "Gill Sans";
   font-size: 18px;
   margin-left: 28%;
   margin-top: 12%;
 }
 
-.agentName2 {
+.agentsContainer .agentName2 {
   font-family: "Gill Sans";
   font-size: 18px;
   margin-left: 22%;
   margin-top: 12%;
 }
 
-.checked {
+.agentsContainer .checked {
   color: #4e89f8;
   margin-left: 5%;
 }
 
-.rating {
+.agentsContainer .rating {
   color: #4e89f8;
   font-size: 20px;
   font-family: "Gill Sans";
-  margin-left: 37%;
-  margin-top: 10%;
+  margin-top: 13%;
 }
 
 .formFormatting {
