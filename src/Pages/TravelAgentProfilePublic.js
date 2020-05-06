@@ -21,15 +21,17 @@ export default class UserProfile extends React.Component {
 
   render(){
     return (
-      <div className="background">
+      <div >
         <div class="hero-image-contact">
           <NavBar state={this.state}/>
           <img
             className="UserProfilePic AlignCenter"
-            src={require("../Images/TravelAgent.jpg")}
+            src={require("../Images/Travel agency.png")}
           ></img>
 
-          <div className="CompanyName">
+        </div>
+
+        <div className="CompanyName">
               Company Name
           </div>
           
@@ -38,17 +40,13 @@ export default class UserProfile extends React.Component {
           </div>
 
           <img
-            className="rating"
+            className="ratinggg"
             src={require("../Images/5stars.png")}
           ></img>
 
           <div className="Address">
               A short Company Description can be put here
           </div>
-
-        </div>
-
-
         <div className="padding">
         <TravelAgentBar />
         </div>
@@ -66,7 +64,7 @@ export default class UserProfile extends React.Component {
           <MediaCard />
         </div>
 
-        <div className="travelAgentReviews">
+        <div className="MyReviews1">
           <h2>MY REVIEWS</h2>
           <UserReviewCard />
           <UserReviewCard />

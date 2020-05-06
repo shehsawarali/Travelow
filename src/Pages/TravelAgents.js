@@ -30,7 +30,8 @@ export default class Home extends React.Component {
           <div className="text">All travel agents</div>
         </div>
 
-        <div className="MyReviews1">
+        <div className="MyReviews2">
+        <TravelAgentt />
         <TravelAgentt />
       </div>
 

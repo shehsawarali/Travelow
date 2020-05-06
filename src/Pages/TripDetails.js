@@ -34,7 +34,7 @@ export default function Home() {
         ></img>
       </div>
 
-      <div className="MyReviews">
+      <div className="MyReviews1">
         <h2>Reviews on previous trips</h2>
         <UserReviewCard />
         <UserReviewCard />
