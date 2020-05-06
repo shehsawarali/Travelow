@@ -25,7 +25,7 @@ export default class Trips extends React.Component {
       </div>
 
 
-      <div className="MyReviews">
+      <div className="MyReviews2">
         <SearchResultbox />
         <SearchResultbox />
         <SearchResultbox />
