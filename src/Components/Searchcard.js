@@ -2,13 +2,11 @@
 // all the Css code can be found in SearchCard.css
 
 import React, { Component } from "react";
-import "../OtherCssFiles/Searchcard.css"
-import Card from "./card"
+import "../OtherCssFiles/Searchcard.css";
+import Card from "./card";
 import { Link } from "react-router-dom";
 
 class SearchResultbox extends Component {
-
-  
   state = {};
   render() {
     return (
@@ -44,3 +42,4 @@ class SearchResultbox extends Component {
 }
 
 export default SearchResultbox;
+
