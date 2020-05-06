@@ -5,8 +5,8 @@ class Card extends Component {
     render() {
         return (
           <div >
-            <div class= "heading">
-              Trip Name
+            <div class= "tripTitleFont">
+            Trip Name
             </div>
 
           <div className="pair">
@@ -20,7 +20,7 @@ class Card extends Component {
 
           </div>
             
-            <div class="tripinfo">
+            <div class="tripAgentFont">
               Here we will put trip info...
             </div>
           </div>

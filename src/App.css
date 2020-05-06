@@ -60,12 +60,14 @@ body {
   font-family: "Rochester";
   letter-spacing: 1px;
   font-size: 32px;
+  color: black;
 }
 
 .tripAgentFont {
   font-family: "Jost";
   letter-spacing: 1px;
   font-size: 12px;
+  color: black;
 }
 
 .priceTag {
