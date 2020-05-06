@@ -1,3 +1,6 @@
+//Page made by Ayesha 
+// css deatils can be found in tRipdrails.css in otherCssfiles folder
+
 import React, { Component } from "react";
 import "../OtherCssFiles/Tripdetails.css"
 
@@ -34,7 +37,7 @@ class TripData extends Component {
                   Global travel
                 </div>
 
-                <button className="buttonColor">
+                <button className="buttonColorTripDeets ">
                   contact us
                 </button>
               

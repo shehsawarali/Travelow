@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../OtherCssFiles/TravelAgentt.css"
 import Carddd from "./CardForTravelAgent"
 import TravelAgentRating from "./TravelAgentRating"
 import { Link } from "react-router-dom";
+import "../OtherCssFiles/TravelAgentt.css"
 
 
 class TravelAgentt extends Component {
@@ -10,20 +10,20 @@ class TravelAgentt extends Component {
   render() { 
       return(   
     <div >
-        <Link to="/travelagentprofilepublic">
+        <Link to="/travelagentprofilepublic" style={{ textDecoration: "none", textTransform: "none"}}>
       
       <div className="TravelAgentSearchCard">
         
-        <div className="UserInfoContainer2">
-          \
+        <div className="CardInfoContainer">
+          
           <img
-            className="TripImage1"
+            className="TravelAgencyImage"
             src={require("../Images/travelagent1.jpg")}
           ></img>
           
           <Carddd/>
           
-          <div className="setting">
+          <div className="AverageRating">
           <TravelAgentRating/>
           </div>
 

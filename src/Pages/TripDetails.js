@@ -1,3 +1,6 @@
+//Page made by Ayesha 
+// css deatils can be found in tRipdrails.css in otherCssfiles folder
+
 import React from "react";
 import NavBar from "../Components/navbar";
 import TripData from "../Components/TripData";

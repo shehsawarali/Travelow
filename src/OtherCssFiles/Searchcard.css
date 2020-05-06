@@ -1,8 +1,16 @@
 /* Page done by Ayesha
 this css file contains class information for 3 pages 
+1. Searchcard.js
+2. Card.js
 
 */
-.card1 {
+
+
+
+
+/* Searchcard.js in Components folder */
+
+.TripsSearchCard {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -13,13 +21,13 @@ this css file contains class information for 3 pages
     
   }
     /* On mouse-over, add a deeper shadow */
-  .card1:hover {
+  .TripsSearchCard:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
   
   
   /* Add some padding inside the card container */
-  .UserInfoContainer1 {
+  .CardInfoContainer {
     /* padding: 5px 10px; */
     align-items: center;
     display: flex;
@@ -28,41 +36,50 @@ this css file contains class information for 3 pages
   .TripImage {
     height: 160px;
     width: 170px;
-    padding: 10px 40px 10px 10px;
+    padding: 15px 40px 15px 15px;
     
   }
 
-  .text{
-    font-family:Helvetica;
-    text-decoration: none;
-    display: inline-block;
+  .TripPrice {
+    font-size: 20px;
+    padding-left: 200px;
+    color: black;
   }
-  .heading {
-      font-size: 30px;
 
+
+
+  /* Searchcard.js in Components folder */
+
+
+
+  
+  /* Card.jsin Components folder */
+  .heading {
+    font-size: 30px;
+    color: black;
+
+   }
+  .pair {
+    display: flex;
+    align-items: center;
   }
 
   .tripby {
     font-style: italic;
     color: Gray;
+    padding-right: 20px;
 
   }
-  .tripdescription {
-    font-size: 25px;
-  }
-
-  .tripinfo1 {
-    font-size: 15px;
-  }
-  .tripinfo1 {
+  .tripinfo {
     font-size: 15px;
     padding-top: 10px;
+    color: black;
   }
 
+
+
+   /* Card.jsin Components folder */
 
   
-  .pair {
-    display: flex;
-    align-items: center;
-  }
+  
 

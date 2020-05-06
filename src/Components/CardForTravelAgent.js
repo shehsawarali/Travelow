@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "../OtherCssFiles/Searchcard.css"
+import "../OtherCssFiles/TravelAgentt.css";
 
 class Carddd extends Component {
     render() {
         return (
           <div >
-            <div class= "heading">
+            <div class= "TravelAgentName">
               Travel Agency name
             </div>
             
-            <div class="tripinfo1">
+            <div class="TravelAgentInfo">
               Here we will put travel agency info...
             </div>
           </div>

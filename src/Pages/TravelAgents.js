@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
-import "../OtherCssFiles/TravelAgents.css";
+import "../OtherCssFiles/TravelAgentt.css";
 import TravelAgentt from "../Components/TravelAgentCard"
 
 export default class Home extends React.Component {
@@ -22,7 +22,7 @@ export default class Home extends React.Component {
       <div>
         <div class="hero-image-contact">
           <NavBar state={this.state} />
-          <div className="text">All travel agents</div>
+          <div className="text">ALL TRAVEL AGENTS</div>
         </div>
 
         <div className="MyReviews2">

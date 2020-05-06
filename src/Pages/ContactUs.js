@@ -45,9 +45,10 @@ class ContactUs extends React.Component {
       <div>
         <div className="hero-image-contact">
           <NavBar state={this.state}/>
+          <div className="text">CONTACT US</div>
         </div>
 
-        <div className="text">CONTACT US</div>
+        
 
         <div className="text-body1">First Name</div>
 

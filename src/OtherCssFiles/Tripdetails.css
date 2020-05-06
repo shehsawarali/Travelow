@@ -1,55 +1,114 @@
-.box {
-    width: 220px;
-    padding: 10px;
-    border: 3px  #585a66;
-    margin: 0;
-    text-align: center;
-    background-color: white;
-  }
+/* Page done by Ayesha
+this css file contains class information for 3 page
+1. TripDetails.js
+2. TripData
+3. TripInfoBar
 
-  .boxpadding {
-    padding: 5px 20px 5px 20px;
-  }
+*/
 
-  .TripTop {
+
+/* TripDetails.js in Pages Folder */
+
+.TripTop {
     
-    align-items: center;
-    padding: 30px 10px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-  }
-  
-  .TripTop1 {
-    padding: 1px 10px 2px 45px;
-    display: flex;
-    align-items: center;
-  }
+  align-items: center;
+  padding: 30px 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
 
-  .TripImage2 {
-    height: 270px;
-    width: 500px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .imgg{
-      height: 38px;
-      width: 38px;
-  }
+
+.TripImage2 {
+  height: 300px;
+  width: 570px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.backgrougImage {
+  height: 280px;
+  width: 850px;
+  padding: 35px 1px 1px 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+
+
+/* TripDetails.js in Pages Folder */
+
+
+
+
+/* TripData.js in Components Folder */
+
+.box {
+  width: 220px;
+  padding: 10px;
+  border: 3px  #585a66;
+  margin: 0;
+  text-align: center;
+  background-color: white;
+}
+
+.boxpadding {
+  padding: 5px 20px 5px 20px;
+}
+
+.TripTop1 {
+  padding: 1px 10px 2px 45px;
+  display: flex;
+  align-items: center;
+}
+
+
+.buttonColorTripDeets {
+  background-color: #0f1daf;
+  color: white;
+}
+
+/* TripData.js in Components Folder */
+
+
+  
+  
+/* TripInfoBar.js in Components Folder */
+
+.barr {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.pair {
+  display: flex;
+  align-items: center;
+}
+
+
+.imgg{
+  height: 38px;
+  width: 38px;
+}
+/* TripInfoBar.js in Components Folder */
+  
+  
   .imgg2{
     height: 50px;
     width: 50px;
 }
   
-  .barr {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    width: 60%;
-    text-align: center;
-    justify-content: space-between;
-  }
+  
   .barr2 {
     display: flex;
     align-items: center;
@@ -59,26 +118,6 @@
     justify-content: space-between;
     background-color: white;
     padding: 10px 7px 10px 7px;
-  }
-
-  
-  .pair {
-    display: flex;
-    align-items: center;
-  }
-
-  .backgrougImage {
-    height: 280px;
-    width: 850px;
-    padding: 35px 1px 1px 1px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    position: relative;
-    top: 0;
-    left: 0;
-
   }
 
   .AccomodationImage

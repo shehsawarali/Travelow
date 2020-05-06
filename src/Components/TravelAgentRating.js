@@ -6,15 +6,15 @@ class TravelAgentRating extends Component {
   render() { 
       return(  
           <div>
-              <div className="aaa" >
+              <div className="averageRatingText" >
                 Average Rating
 
               </div>
-              <div className="rate">
+              <div className="AverageRatingNumber">
                   3.5
                 <img
                     className="Star"
-                    src={require("../Images/Star.png")}
+                    src={require("../Images/YellowStar.png")}
                 ></img>
               </div>
           </div>      
