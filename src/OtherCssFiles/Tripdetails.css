@@ -12,9 +12,13 @@
   }
 
   .TripTop {
+    
+    align-items: center;
     padding: 30px 10px;
     display: flex;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
   }
   
   .TripTop1 {
@@ -26,8 +30,8 @@
   .TripImage1 {
     height: 270px;
     width: 500px;
-    padding: 10px 40px 10px 250px;
-  
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .imgg{
       height: 38px;
@@ -53,6 +57,8 @@
     width: 80%;
     text-align: center;
     justify-content: space-between;
+    background-color: white;
+    padding: 10px 7px 10px 7px;
   }
 
   

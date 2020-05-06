@@ -14,16 +14,16 @@
   
   
   /* Add some padding inside the card container */
-  .UserInfoContainer1 {
-    padding: 5px 10px;
+  .UserInfoContainer2 {
+    /* padding: 5px 10px; */
     align-items: center;
     display: flex;
   }
   
-  .TripImage {
-      height: 150px;
-      width: 160px;
-      padding: 1px 40px 10px 10px;
+  .TripImage1 {
+      height: 160px;
+      width: 170px;
+      padding: 10px 40px 10px 10px;
     
   }
 
@@ -59,7 +59,6 @@
   .rating {
     width: 150px;
     height: 30px;
-    margin-top: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -80,4 +79,24 @@
   .travelAgentReviews {
     margin-left: 180px;
     margin-right: 180px;
+  }
+  .Star {
+    Width: 25px;
+    height: 25px;
+  }
+
+  .aaa {
+    font-size: 25px;
+  }
+
+  .rate {
+    display: flex;
+    padding-top: 15px;
+    padding-left: 45px;
+    align-items: center;
+    font-size: 25px;
+  }
+
+  .setting {
+    padding-left: 120px;
   }
