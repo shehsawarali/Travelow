@@ -11,6 +11,7 @@ import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
 import UploadTripPage from "./Pages/UploadTripPage";
+import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
 import { Route } from "react-router-dom";
 
 /*SHEHSAWAR*/
@@ -53,7 +54,7 @@ class App extends React.Component {
           path="/trips"
           render={(props) => <Trips {...props} state={this.state} />}
         ></Route>
-       {/* Ayesha */}
+        {/* Ayesha */}
         <Route
           exact
           path="/tripdetails"
@@ -63,9 +64,11 @@ class App extends React.Component {
         <Route
           exact
           path="/travelagentprofilepublic"
-          render={(props) => <TravelAgentProfilePublic {...props} state={this.state} />}
+          render={(props) => (
+            <TravelAgentProfilePublic {...props} state={this.state} />
+          )}
         ></Route>
-        
+
         <Route
           exact
           path="/travelagents"
