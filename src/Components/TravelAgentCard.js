@@ -11,13 +11,18 @@ class TravelAgentt extends Component {
       return(   
     <div >
         <Link to="/travelagentprofilepublic">
-      <div className="card1">
+      
+      <div className="TravelAgentSearchCard">
+        
         <div className="UserInfoContainer2">
+          \
           <img
             className="TripImage1"
             src={require("../Images/travelagent1.jpg")}
           ></img>
+          
           <Carddd/>
+          
           <div className="setting">
           <TravelAgentRating/>
           </div>

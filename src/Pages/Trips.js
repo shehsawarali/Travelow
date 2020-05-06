@@ -14,8 +14,6 @@ export default class Trips extends React.Component {
       this.setState(nextProps.state);
     }
   }
-
-
   render(){
     return (
     <div>

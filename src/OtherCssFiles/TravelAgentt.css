@@ -1,15 +1,29 @@
-.card1 {
+.TravelAgentSearchCard {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     margin-top: 20px;
     margin-bottom: 20px;
     align-items: center;
+    background-color: white;
     
   }
     /* On mouse-over, add a deeper shadow */
-  .card1:hover {
+  .TravelAgentSearchCard:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .TravelAgentProfilePicture {
+    width: 150px;
+    height: 150px;
+    margin-top: 60px;
+    background-color: lightblue;
+    border-radius: 50%;
+    border: 4px solid #494e6b;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   
   
@@ -99,4 +113,13 @@
 
   .setting {
     padding-left: 120px;
+  }
+  .starrating {
+    width: 10%;
+    height: 2%;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }

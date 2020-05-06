@@ -1,3 +1,7 @@
+/* Page done by Ayesha
+this css file contains class information for 3 pages 
+
+*/
 .card1 {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -5,7 +9,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
     align-items: center;
-    text-decoration: none;
     background-color: white;
     
   }
@@ -17,16 +20,15 @@
   
   /* Add some padding inside the card container */
   .UserInfoContainer1 {
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     align-items: center;
     display: flex;
-    text-decoration: none;
   }
   
   .TripImage {
-      height: 150px;
-      width: 160px;
-      padding: 1px 40px 10px 10px;
+    height: 160px;
+    width: 170px;
+    padding: 10px 40px 10px 10px;
     
   }
 

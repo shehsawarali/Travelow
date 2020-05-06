@@ -1,8 +1,3 @@
-/*
-04/05/2020 - 11:30am:
-Danyal changed react hook to class component.
-Shifted styling to new css file TravelAgents.css.
-*/
 
 import React, { Component } from "react";
 import NavBar from "../Components/navbar";
