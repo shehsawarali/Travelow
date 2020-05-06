@@ -557,8 +557,8 @@ h4 {
 
 .agentsContainer {
   width: 80%;
-  height: 200px;
-  margin: 80px auto 60px auto;
+  height: 350px;
+  margin: 50px auto 60px auto;
   padding: 20px;
 }
 
@@ -603,6 +603,7 @@ h4 {
   background-position: center;
   background-size: contain;
   margin-left: 50px;
+  margin-top: 25px;
   display: block;
 }
 

@@ -9,20 +9,20 @@ class SearchResultbox extends Component {
   state = {};
   render() {
     return (
-      <Link to="/tripdetails">
+      
       <div className="card1">
         <div className="UserInfoContainer1">
-          <img
+        <Link to="/tripdetails"><img
             className="TripImage"
             src={require("../Images/hunza.png")}
-          ></img>
+          ></img></Link>
 
           <Card/>
           price
           
         </div>
       </div>
-      </Link>
+      
     );
   }
 }
