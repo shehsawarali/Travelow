@@ -122,7 +122,7 @@ body {
   font-family: "JostHero";
   top: 50%;
   left: 41.245%;
-  font-size: 55px;
+  font-size: 4vw; /*55px*/
   transform: translate(-50%, -50%);
   color: white;
 }
@@ -132,7 +132,7 @@ body {
   font-family: "JostHero";
   top: 50%;
   left: 61.25%;
-  font-size: 55px;
+  font-size: 4vw;
   transform: translate(-50%, -50%);
   color: black;
 }
@@ -565,6 +565,7 @@ h4 {
 }
 
 .agentsContainer {
+  display: flex;
   width: 80%;
   height: 350px;
   margin: 50px auto 60px auto;
@@ -589,11 +590,13 @@ h4 {
 }
 
 .agentsContainer .agentBox {
-  width: 17%;
+  width: 150px; /*17%*/
   height: 220px;
-  margin-left: 55%;
-  margin-top: -16%;
-  background-color: white;
+  text-align: center;
+  justify-content: center;
+
+  /*margin-left: 55%;
+  margin-top: -16%;*/
 }
 
 .agentsContainer .agentBox2 {
@@ -601,8 +604,6 @@ h4 {
   height: 220px;
   margin-left: 75%;
   margin-top: -19.1%;
-  background-color: white;
-
 }
 
 .agentsContainer .agentLogo {
@@ -614,13 +615,11 @@ h4 {
   background-image: url("./Images/agentlogo1.png");
   background-position: center;
   background-size: contain;
-  margin-left: 50px;
-  margin-top: 25px;
-  display: block;
-}
-
-.paddingg1 {
-  padding-top: 7px;
+  justify-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  /*margin-top: 25px;
+  display: block;*/
 }
 
 .agentsContainer .agentLogo2 {
@@ -633,22 +632,22 @@ h4 {
   background-color: white;
   background-position: center;
   background-size: contain;
-  margin-left: 50px;
-  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
   display: block;
 }
 
 .agentsContainer .agentName {
   font-family: "Gill Sans";
   font-size: 18px;
-  margin-left: 28%;
+  margin-left: 0%;
   margin-top: 12%;
 }
 
 .agentsContainer .agentName2 {
   font-family: "Gill Sans";
   font-size: 18px;
-  margin-left: 22%;
+  margin-left: 0%;
   margin-top: 12%;
 }
 
@@ -662,7 +661,7 @@ h4 {
   font-size: 20px;
   font-family: "Gill Sans";
   margin-top: 13%;
-  margin-left: 36%;
+  margin-left: 10px;
 }
 
 .formFormatting {
