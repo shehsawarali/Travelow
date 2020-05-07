@@ -594,6 +594,7 @@ h4 {
   height: 220px;
   text-align: center;
   justify-content: center;
+  background-color: white;
 
   /*margin-left: 55%;
   margin-top: -16%;*/
@@ -604,6 +605,11 @@ h4 {
   height: 220px;
   margin-left: 75%;
   margin-top: -19.1%;
+  background-color: white;
+}
+
+.paddingg1 {
+  padding-top: 7px;
 }
 
 .agentsContainer .agentLogo {
