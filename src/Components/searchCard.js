@@ -20,7 +20,6 @@ class SearchResultbox extends Component {
             to="/tripdetails" style={{ textDecoration: "none", textTransform: "none"}}
           >
 
-        <div className="completecover">
           <div className="CardInfoContainer">
 
           <img
@@ -35,8 +34,7 @@ class SearchResultbox extends Component {
           <div className="TripPrice" >
             Trip Price
           </div>
-          
-        </div>
+        
         </Link>
 
       </div>

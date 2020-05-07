@@ -51,6 +51,8 @@ this css file contains class information for 3 pages
     font-size: 20px;
     color: black;
     align-self: right;
+    margin-left: auto;
+    padding-right: 30px;
   }
 
 
