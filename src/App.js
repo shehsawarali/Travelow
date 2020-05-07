@@ -28,7 +28,7 @@ class App extends React.Component {
       display: "Login/Signup",
       userType: "",
     };
-
+    
   }
 
   componentWillMount() {

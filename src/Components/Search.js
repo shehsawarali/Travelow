@@ -61,7 +61,7 @@ class search extends React.Component{
                             <button className="searchButton" onClick={this.query}><span>Search</span></button>
                         </Link>
 
-                        <button className="searchButton" onClick={this.logout}><span>Logout</span></button>
+                        {/* <button className="searchButton" onClick={this.logout}><span>Logout</span></button> */}
                     </div>
                 </div>
             </div>
