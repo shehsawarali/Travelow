@@ -47,7 +47,7 @@ class search extends React.Component{
 
             <div>
                 <div>
-                    <div className = "searchBar">
+                    <div className = "searchBar2">
 
                         <input label="Search" icon="search" placeholder={'Search Travelow'} onChange={this.searchHandler} height='10px'></input>
                         
