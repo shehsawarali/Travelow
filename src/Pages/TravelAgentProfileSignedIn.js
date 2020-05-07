@@ -93,7 +93,7 @@ export default class AgentProfileLoggedIn extends React.Component {
           <div className="MyReviews1">
             <h2>
               MY REVIEWS
-              <Button
+              {/* <Button
                 variant="containedPrimary"
                 style={{
                   color: "white",
@@ -102,7 +102,7 @@ export default class AgentProfileLoggedIn extends React.Component {
                 }}
               >
                 All Reviews
-              </Button>
+              </Button> */}
             </h2>
             <UserReviewCard />
             <UserReviewCard />

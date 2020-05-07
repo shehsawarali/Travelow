@@ -83,7 +83,7 @@ export default class UserProfile extends React.Component {
         <div className="MyReviews1">
           <h2>
             REVIEWS
-            <Button  //show this if customer is logged in
+            {/* <Button  //show this if customer is logged in
               variant="containedPrimary"
               style={{
                 color: "white",
@@ -92,7 +92,7 @@ export default class UserProfile extends React.Component {
               }}
             >
               Write Review
-            </Button>
+            </Button> */}
             <Button
               variant="containedPrimary"
               style={{
@@ -101,7 +101,7 @@ export default class UserProfile extends React.Component {
                 left: "63%",
               }}
             >
-              All Reviews
+              Write Review
             </Button>
           </h2>
           <UserReviewCard />
