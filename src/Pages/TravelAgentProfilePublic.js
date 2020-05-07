@@ -7,6 +7,7 @@ import TravelAgentBar from "../Components/TravelAgentContactBar";
 import MediaCard from "../Components/featuredTrip";
 import UserReviewCard from "../Components/UserReview";
 import "../OtherCssFiles/TravelAgentt.css";
+import { Link } from "react-router-dom";
 import SearchBar2 from "../Components/SearchBar2";
 import Button from "@material-ui/core/Button";
 
@@ -83,6 +84,7 @@ export default class UserProfile extends React.Component {
         <div className="MyReviews1">
           <h2>
             REVIEWS
+            <Link to="/rateandreview">
             <Button  //show this if customer is logged in
               variant="containedPrimary"
               style={{
@@ -93,6 +95,8 @@ export default class UserProfile extends React.Component {
             >
               Write Review
             </Button>
+              </Link>
+            
             <Button
               variant="containedPrimary"
               style={{
