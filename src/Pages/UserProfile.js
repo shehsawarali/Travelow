@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../Components/navbar";
 import UserReviewCard from "../Components/UserReview";
-import { Button } from "react-bootstrap";
+import Button from "@material-ui/core/Button";
 
 export default class UserProfile extends React.Component {
 
@@ -26,11 +26,11 @@ export default class UserProfile extends React.Component {
             style={{ width: "70%", marginTop: "40px" }}
             className="AlignCenter"
           >
-            <Button variant="primary" style={{ float: "left" }}>
+            <Button variant="containedPrimary" style={{ float: "left", color: "white", backgroundColor: "#0f1daf"}}>
               Edit Profile
             </Button>
 
-            <Button variant="primary" style={{ float: "right" }}>
+            <Button variant="outlinedPrimary" style={{ float: "right", color: "white", backgroundColor: "#0f1daf" }}>
               Sign Out
             </Button>
           </div>

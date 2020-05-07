@@ -396,6 +396,7 @@ h4 {
   transition: 0.3s;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -516,7 +517,7 @@ h4 {
 }
 
 .searchBar button {
-  background-color: #0f1daf; /* Green */
+  background-color: #0f1daf;
   border: none;
   color: white;
   border-radius: 5px;
