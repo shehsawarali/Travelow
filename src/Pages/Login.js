@@ -43,13 +43,13 @@ class Login extends React.Component {
           style={{
             position: "absolute",
             width: "20%",
-            border: "1px solid black",
-            borderRadius: "10px 10px 10px 10px",
-            backgroundColor: "whitesmoke",
+            border: "4px solid #2B65EC",
+            borderRadius: "0px 0px 0px 0px",
+            backgroundColor: "white",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
-            top: "20%",
-            bottom: "25%",
-            minHeight: "400px",
+            top: "30%",
+            bottom: "30%",
+            minHeight: "300px",
           }}
         >
           <Link to="/">
@@ -73,7 +73,6 @@ class Login extends React.Component {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <form>
               <div className="form-group text-left">
-                <label htmlFor="exampleInputUsername">Email</label>
                 <br></br>
                 <input
                   type="text"
@@ -83,10 +82,7 @@ class Login extends React.Component {
                 />
               </div>
 
-              <br></br>
-
               <div className="form-group text-left">
-                <label htmlFor="exampleInputPassword1">Password</label>
                 <br></br>
                 <input
                   type="password"
@@ -101,38 +97,20 @@ class Login extends React.Component {
           <br></br>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className="button-style-1" onClick={this.logIn}>
-              Submit
-            </button>
+            <Link to="/">
+              <button className="button-style-1" onClick={this.logIn}>
+                Login
+              </button>
+            </Link>
           </div>
 
           <br></br>
 
-          <div style={{ backgroundColor: "" }}>
-            <hr
-              style={{
-                border: "none",
-                borderTop: "1px solid mediumblue",
-              }}
-            ></hr>
-            <br></br>
-
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              Are you a new user?
-            </div>
-            <br></br>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Link to="/login/signup/user">
-                <button className="button-style-1">Sign Up as Customer</button>
-              </Link>
-
-              <Link to="/login/signup/agent">
-                <button className="button-style-1">Sign Up as Agent</button>
-              </Link>
-            </div>
-
-            <br></br>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            Don't have an account? &nbsp;
+            <Link to="/login/signup/user">Sign Up</Link>
           </div>
+          <br></br>
         </div>
       </div>
     );

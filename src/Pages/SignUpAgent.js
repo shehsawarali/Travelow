@@ -28,7 +28,7 @@ class SignUpAgent extends React.Component {
             companyOwner: companyOwner,
             contactNo: contactNo,
             OwnerCNIC: CNIC,
-            userType: "Travel Agent"
+            userType: "Travel Agent",
           },
           { merge: true }
         );
@@ -69,12 +69,12 @@ class SignUpAgent extends React.Component {
             width: "20%",
             border: "1px solid black",
             borderRadius: "10px 0px 0px 10px",
-            backgroundColor: "whitesmoke",
+            backgroundColor: "white",
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
-            marginTop: "3%",
-            marginBottom: "0%",
-            minHeight: "640px",
-            maxHeight: "640px",
+            marginTop: "2%",
+            marginBottom: "3%",
+            minHeight: "680px",
+            maxHeight: "680px",
           }}
         >
           <Link to="/">
@@ -86,14 +86,17 @@ class SignUpAgent extends React.Component {
           <br></br>
           <br></br>
 
-          <h3
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            Sign Up as Agent
-          </h3>
+          <h3 style={{ display: "flex", marginLeft: "55px" }}>TRAVELOW</h3>
+
+          <div style={{ display: "flex", marginLeft: "55px" }}>Sign Up As:</div>
+
+          <div style={{ display: "flex", marginLeft: "55px" }}>
+            ○ &nbsp;<Link to="/login/signup/user"> Customer</Link>
+          </div>
+
+          <div style={{ display: "flex", marginLeft: "55px" }}>
+            ● &nbsp;<Link to="/login/signup/agent"> Travel Agent</Link>
+          </div>
 
           <br></br>
 
@@ -128,7 +131,7 @@ class SignUpAgent extends React.Component {
               <br></br>
 
               <div className="form-group text-left">
-                <label htmlFor="exampleCNIC">Owner/Manager CNIC Number</label>
+                <label htmlFor="exampleCNIC">Owner/Manager CNIC</label>
                 <br></br>
                 <input
                   type="text"
@@ -212,17 +215,17 @@ class SignUpAgent extends React.Component {
                   accept="image/*"
                 />
               </div>
-
-              <br></br>
             </form>
           </div>
 
           <br></br>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className="button-style-1" onClick={this.signUp}>
-              Submit
-            </button>
+            <Link to="/">
+              <button className="button-style-1" onClick={this.signUp}>
+                Sign Up
+              </button>
+            </Link>
           </div>
 
           <br></br>
@@ -237,11 +240,11 @@ class SignUpAgent extends React.Component {
             boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
             top: "0%",
             bottom: "0",
-            marginTop: "3%",
+            marginTop: "2%",
             marginBottom: "3%",
             overflow: "Hidden",
-            minHeight: "640px",
-            maxHeight: "640px",
+            minHeight: "680px",
+            maxHeight: "680px",
           }}
         >
           <img
