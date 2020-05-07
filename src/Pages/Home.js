@@ -3,7 +3,6 @@ import NavBar from "../Components/navbar";
 import MediaCard from "../Components/featuredTrip";
 import Search from "../Components/Search";
 import TopAgents from "../Components/topAgents";
-import UserReviewCard from "../Components/UserReview"; 
 
 const Title = ({ title }) => {
   return (
@@ -30,9 +29,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <div class="hero-image">
           <NavBar state={this.state} />
-          <div class="hero-text-white">DISCOVER</div>
+          <div class="hero-text-white">DISCOVER &nbsp;</div>
           <div class="hero-text-black">PAKISTAN.</div>
           <div position="relative">
             <Search />
@@ -46,23 +49,17 @@ export default class Home extends React.Component {
           <img
             src={require("../Images/hunza.png")}
             alt="picture2"
-            width="80%"
-            height="600px"
-            className="AlignCenter"
-          
+            width="100%"
+            height="900px"
           ></img>
         </div>
         <TopAgents />
-        <div className="MyReviews1">
-          <UserReviewCard />
-        </div>
-
         <div className="homepage-image-import">
           <img
             src={require("../Images/homePageElement.jpg")}
             alt="picture2"
             width="90%"
-            height="900px"
+            height="1000px"
           ></img>
         </div>
       </div>
