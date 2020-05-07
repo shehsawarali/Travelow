@@ -13,6 +13,7 @@ import UserProfile from "./Pages/UserProfile";
 import UploadTripPage from "./Pages/UploadTripPage";
 import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
 import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn"
+import WriteReview from "./Pages/RatingAndReview";
 import { Route } from "react-router-dom";
 
 /*SHEHSAWAR*/
@@ -119,6 +120,11 @@ class App extends React.Component {
           exact
           path="/uploadtrippage"
           render={(props) => <UploadTripPage {...props} state={this.state} />}
+        ></Route>
+        <Route
+          exact
+          path="/rateandreview"
+          render={(props) => <WriteReview {...props} state={this.state} />}
         ></Route>
       </>
     );
