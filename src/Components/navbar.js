@@ -12,12 +12,13 @@ export default class navBar extends Component {
   constructor(props){
     super(props);
     this.state = props.state;
+    // console.log(this.state);
   }
 
   componentWillReceiveProps(nextProps) {
-    // You don't have to do this check first, but it can help prevent an unneeded render
     if (nextProps.state !== this.state) {
       this.setState(nextProps.state);
+      // console.log(nextProps.state);
     }
   }
 //   SHEHSAWAR
