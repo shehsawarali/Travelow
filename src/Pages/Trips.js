@@ -1,3 +1,5 @@
+//page made by Ayesha
+
 import React from "react";
 import NavBar from "../Components/navbar";
 import SearchResultbox from "../Components/Searchcard";
@@ -21,6 +23,7 @@ export default class Trips extends React.Component {
       <NavBar state={this.state} />
       <div className="text">All Trips</div>
       </div>
+      
 
 
       <div className="MyReviews2">
@@ -29,6 +32,7 @@ export default class Trips extends React.Component {
         <SearchResultbox />
         <SearchResultbox />
       </div>
+      
     </div>
     );
   }

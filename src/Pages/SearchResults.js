@@ -1,6 +1,13 @@
+//page made by Ayesha
+//CSS classes can be found in the SearchCard.css
+
+
 import React from "react";
 import NavBar from "../Components/navbar";
 import SearchResultbox from "../Components/Searchcard";
+import Filters from "../Components/Searchfilters";
+import "../OtherCssFiles/SearchFilterr.css";
+
 
 export default class SearchResults extends React.Component {
 /*SHEHSAWAR*/
@@ -22,14 +29,23 @@ export default class SearchResults extends React.Component {
       <div>
         <div class="hero-image-contact">
           <NavBar state={this.state}/>
-          <div className="text">Search results</div>
+          <div className="text">SEARCH RESULTS TRIP</div>
         </div>
 
-        <div className="MyReviews1">
+        
+      <div className="TripPageGrid">
+        <div className="FilterAlignment">
+        <Filters/>
+        </div>
+        
+
+        <div className="SearchResultTrips">
           <SearchResultbox />
           <SearchResultbox />
           <SearchResultbox />
         </div>
+
+       </div>
       </div>
     );
   }

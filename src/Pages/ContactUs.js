@@ -1,3 +1,6 @@
+// Page made by Ayesha
+// all the Css code can be found in App.css
+
 import React from "react";
 import NavBar from "../Components/navbar";
 import firebase from "../config/fire";
