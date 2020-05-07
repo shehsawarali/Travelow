@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 // import { MdFormatAlignRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import firebase from '../config/fire'
-require('firebase/auth')
+import firebase from "../config/fire";
+import SearchBar2 from "./SearchBar2";
+require("firebase/auth");
 
 const database = firebase.firestore();
 
 export default class navBar extends Component {
-  
-//SHEHSAWAR
-  constructor(props){
+  //SHEHSAWAR
+  constructor(props) {
     super(props);
     this.state = props.state;
   }
@@ -20,8 +20,8 @@ export default class navBar extends Component {
       this.setState(nextProps.state);
     }
   }
-//   SHEHSAWAR
-  
+  //   SHEHSAWAR
+
   render() {
     return (
       <nav>

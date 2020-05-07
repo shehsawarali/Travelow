@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavBar from "../Components/navbar";
 import UploadForm from "../Components/Form";
 // import CheckBox from "../Components/CheckBox";
-import Button from "@material-ui/core/Button";
 
 class UploadTripPage extends Component {
   constructor(props) {
@@ -27,10 +26,6 @@ class UploadTripPage extends Component {
         <div className="formFormatting">
           <UploadForm />
         </div>
-        {/* <CheckBox /> */}
-        <Button variant="contained" color="primary">
-          Submit
-        </Button>
       </>
     );
   }

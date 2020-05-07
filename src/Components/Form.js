@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Button from "@material-ui/core/Button";
 // state = {
 //     date: new Date(),
 //   };
@@ -88,6 +89,9 @@ class UploadForm extends Component {
         </div>
         <h3>Trip Type:</h3>
         <CheckBox />
+        <Button variant="contained" color="primary">
+          Submit
+        </Button>
       </form>
     );
   }

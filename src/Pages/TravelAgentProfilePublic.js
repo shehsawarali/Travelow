@@ -7,12 +7,10 @@ import TravelAgentBar from "../Components/TravelAgentContactBar";
 import MediaCard from "../Components/featuredTrip";
 import UserReviewCard from "../Components/UserReview";
 import "../OtherCssFiles/TravelAgentt.css";
-
-
+import SearchBar2 from "../Components/SearchBar2";
 
 export default class UserProfile extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = props.state;
   }
@@ -24,44 +22,38 @@ export default class UserProfile extends React.Component {
     }
   }
 
-  render(){
+  render() {
     return (
-      <div >
+      <div>
         <div class="hero-image-contact">
-          <NavBar state={this.state}/>
-          <img className="TravelAgentProfilePicture " src={require("../Images/Travel agency.png")}></img>
+          <NavBar state={this.state}></NavBar>
+          <img
+            className="TravelAgentProfilePicture "
+            src={require("../Images/Travel agency.png")}
+          ></img>
         </div>
 
+        <div className="CompanyName">Company Name</div>
 
-        <div className="CompanyName">
-              Company Name
-        </div>
-          
-        <div className="Address">
-              Company address
-        </div>
+        <div className="Address">Company address</div>
 
-        <img className="starrating" src={require("../Images/5stars.png")} ></img>
+        <img className="starrating" src={require("../Images/5stars.png")}></img>
 
         <div className="Address">
-              A short Company Description can be put here
+          A short Company Description can be put here
         </div>
 
         <div className="padding">
-        <TravelAgentBar />
+          <TravelAgentBar />
         </div>
 
-        <div className="Upcoming">
-            Upcoming trips
-        </div>
+        <div className="Upcoming">Upcoming trips</div>
 
         <div className="organize-cards">
           <MediaCard />
         </div>
 
-        <div className="Upcoming">
-            Previous Trips
-        </div>
+        <div className="Upcoming">Previous Trips</div>
 
         <div className="organize-cards">
           <MediaCard />
@@ -72,10 +64,7 @@ export default class UserProfile extends React.Component {
           <UserReviewCard />
           <UserReviewCard />
         </div>
-       
       </div>
-      
-
     );
   }
 }

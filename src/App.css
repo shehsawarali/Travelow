@@ -105,10 +105,10 @@ body {
 
 .hero-image-contact {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("./Images/mainBackground.jpg");
+  background-image: url("./Images/smallerBackground.jpg");
 
   /* Set a specific height */
-  min-height: 400px;
+  min-height: 300px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: top;
@@ -168,16 +168,15 @@ body {
   color: black;
 }
 
-
 .MyReviews1 {
   margin-left: auto;
   margin-right: auto;
-  width:70%;
+  width: 70%;
 }
 .MyReviews2 {
   margin-left: auto;
   margin-right: auto;
-  width:60%;
+  width: 60%;
 }
 
 /* Ayesha   */
@@ -275,7 +274,6 @@ body {
 
 nav {
   background-color: rgba(0, 0, 0, 0.2);
-  margin: 0;
   overflow: hidden;
 }
 nav ul {
@@ -647,10 +645,90 @@ h4 {
   font-size: 20px;
   font-family: "Gill Sans";
   margin-top: 13%;
+  margin-left: 36%;
 }
 
 .formFormatting {
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
+}
+
+.searchBar2 {
+  text-align: center;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 10px;
+  left: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+.searchBar2 input {
+  /*153*/
+  border: 5px solid rgb(209, 209, 209);
+  background-color: rgb(209, 209, 209);
+  width: 25%;
+  opacity: 0.75;
+  height: 40px;
+  outline: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  backdrop-filter: blur(0.5px);
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.searchBar2 input:hover,
+.searchBar2 button:hover {
+  opacity: 0.9;
+}
+
+.searchBar2 button:active {
+  opacity: 1;
+  background-color: rgb(87, 86, 156);
+  color: white;
+}
+
+.searchBar2 button {
+  background-color: #0f1daf; /* Green */
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 13.5px 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-left: 1%;
+  box-sizing: border-box;
+  outline: none;
+  top: 50%;
+}
+
+.searchBar2 button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.searchBar2 button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.searchBar2 button:hover span {
+  padding-right: 15px;
+}
+
+.searchBar2 button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
