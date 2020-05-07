@@ -29,9 +29,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <div class="hero-image">
           <NavBar state={this.state} />
-          <div class="hero-text-white">DISCOVER</div>
+          <div class="hero-text-white">DISCOVER &nbsp;</div>
           <div class="hero-text-black">PAKISTAN.</div>
           <div position="relative">
             <Search />

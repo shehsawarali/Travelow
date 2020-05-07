@@ -35,6 +35,7 @@ const useStyles = makeStyles({
   root: {
     width: "340px",
     height: "340px",
+    marginBottom: "50px",
   },
   media: {
     height: "240px",
@@ -47,62 +48,56 @@ export default function MediaCard() {
   return (
     <>
       <div className="column">
-        <div className="boxShadow">
-          <Card className={classes.root} elevation="8" square="true">
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/kalam.png")}
-              title="Kalam"
-            ></CardMedia>
-            <CardContent>
-              <Typography gutterBottom component="h1" variant="alignCenter">
-                <div className="tripTitleFont">Kalam</div>
-              </Typography>
-              <Typography variant="alignCenter" component="p">
-                <div className="tripAgentFont">TRAVELIA</div>
-              </Typography>
-              <div className="priceTag">Rs. 8,000</div>
-            </CardContent>
-          </Card>
-        </div>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/kalam.png")}
+            title="Kalam"
+          ></CardMedia>
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Kalam</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">TRAVELIA</div>
+            </Typography>
+            <div className="priceTag">Rs. 8,000</div>
+          </CardContent>
+        </Card>
 
-        <div className="boxShadow">
-          <Card className={classes.root} elevation="8" square="true">
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/nathiagali.png")}
-              title="Nathiagali"
-            />
-            <CardContent>
-              <Typography gutterBottom component="h1" variant="alignCenter">
-                <div className="tripTitleFont">Nathiagali</div>
-              </Typography>
-              <Typography variant="alignCenter" component="p">
-                <div className="tripAgentFont">BESTWAY TRAVELS</div>
-              </Typography>
-              <div className="priceTag">Rs. 6,500</div>
-            </CardContent>
-          </Card>
-        </div>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/nathiagali.png")}
+            title="Nathiagali"
+          />
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Nathiagali</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">BESTWAY TRAVELS</div>
+            </Typography>
+            <div className="priceTag">Rs. 6,500</div>
+          </CardContent>
+        </Card>
 
-        <div className="boxShadow">
-          <Card className={classes.root} elevation="8" square="true">
-            <CardMedia
-              className={classes.media}
-              image={require("../Images/bhawalpur.png")}
-              title="Bhawalpur"
-            />
-            <CardContent>
-              <Typography gutterBottom component="h1" variant="alignCenter">
-                <div className="tripTitleFont">Bhawalpur</div>
-              </Typography>
-              <Typography variant="alignCenter" component="p">
-                <div className="tripAgentFont">BEYDAR TRAVELS</div>
-              </Typography>
-              <div className="priceTag">Rs. 16,800</div>
-            </CardContent>
-          </Card>
-        </div>
+        <Card className={classes.root} elevation="8" square="true">
+          <CardMedia
+            className={classes.media}
+            image={require("../Images/bhawalpur.png")}
+            title="Bhawalpur"
+          />
+          <CardContent>
+            <Typography gutterBottom component="h1" variant="alignCenter">
+              <div className="tripTitleFont">Bhawalpur</div>
+            </Typography>
+            <Typography variant="alignCenter" component="p">
+              <div className="tripAgentFont">BEYDAR TRAVELS</div>
+            </Typography>
+            <div className="priceTag">Rs. 16,800</div>
+          </CardContent>
+        </Card>
       </div>
     </>
   );

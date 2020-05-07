@@ -2,6 +2,7 @@
 // css deatils can be found in tRipdrails.css in otherCssfiles folder
 
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../OtherCssFiles/Tripdetails.css"
 
 class TripData extends Component {
@@ -37,9 +38,13 @@ class TripData extends Component {
                   Global travel
                 </div>
 
-                <button className="buttonColorTripDeets ">
-                  contact us
+                <Link to="/travelagentprofilepublic">
+                <button  className="buttonColorTripDeets ">
+                  View Profile
                 </button>
+              </Link>
+
+
               
               </div>
             </div>
