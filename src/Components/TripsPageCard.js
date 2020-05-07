@@ -11,15 +11,25 @@ class SearchResultbox extends Component {
   constructor(props){
     super(props);
     this.state = props.trip;
+    this.click = this.click.bind(this);
+  }
+
+  click (){
+    this.props.history.push({
+      pathname: '/tripdetails',
+      state: { trip: this.state.location }
+    })
   }
   
   render() {
     return (
      
-
       <div className="TripsSearchCard">
-         <Link
-            to="/tripdetails" style={{ textDecoration: "none", textTransform: "none"}}
+         <Link to={{
+           pathname:'/tripdetails',
+           state:{trip: this.state}
+          }}
+          style={{ textDecoration: "none", textTransform: "none"}}
           >
 
         <div className="CardInfoContainer">
