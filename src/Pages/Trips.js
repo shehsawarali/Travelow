@@ -1,13 +1,29 @@
-//page made by Ayesha
-
 import React from "react";
 import NavBar from "../Components/navbar";
 import SearchResultbox from "../Components/Searchcard";
+import firebase from "../config/fire";
+
+const database = firebase.firestore().collection("Trips");
 
 export default class Trips extends React.Component {
   constructor(props){
     super(props);
-    this.state = props.state;
+    this.state = {
+      user: props.state,
+      data: []
+    }
+
+    var queryreturns = [];
+    database.orderBy("lastUpdated", "desc").limit(10)
+    .get()
+    .then(function(snapshot) {
+      snapshot.forEach(function(doc) {
+        var childData = doc.data();
+        queryreturns = queryreturns.concat(childData)
+      });
+    }
+    )
+    .then(() => this.setState({data: queryreturns}));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -16,23 +32,25 @@ export default class Trips extends React.Component {
       this.setState(nextProps.state);
     }
   }
+
   render(){
     return (
     <div>
       <div class="hero-image-contact">
-      <NavBar state={this.state} />
-      <div className="text">All Trips</div>
+      <NavBar state={this.state.user} />
+      <div className="text">Recently Added Trips</div>
       </div>
-      
 
 
-      <div className="MyReviews2">
-        <SearchResultbox />
-        <SearchResultbox />
-        <SearchResultbox />
-        <SearchResultbox />
+      <div className = "MyReviews2">
+        {this.state.data.map(function(d, idx){
+          return (
+            <div key={idx}>
+              <SearchResultbox trip={d}/>
+            </div>
+          )
+        })}
       </div>
-      
     </div>
     );
   }
