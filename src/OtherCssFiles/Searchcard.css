@@ -1,7 +1,7 @@
 /* Page done by Ayesha
 this css file contains class information for 3 pages 
 1. Searchcard.js
-2. Card.js
+2. searchSubcard.js
 
 */
 
@@ -62,7 +62,7 @@ this css file contains class information for 3 pages
 
 
   
-  /* Card.js in Components folder */
+  /* searchSubcard.js in Components folder */
   .heading {
     font-size: 30px;
     color: black;
@@ -87,7 +87,7 @@ this css file contains class information for 3 pages
 
 
 
-   /* Card.js in Components folder */
+   /* searchSubcard.js in Components folder */
 
 
   

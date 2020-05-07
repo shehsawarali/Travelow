@@ -24,7 +24,7 @@ class SearchResultbox extends Component {
 
           <img
             className="TripImage"
-            src={require("../Images/hunza.png")}
+            src={require("../Images/muree.jpg")}
           ></img>
 
           

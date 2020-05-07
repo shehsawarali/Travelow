@@ -16,12 +16,12 @@ class Card extends Component {
           </div>
 
         <div className="pair">
-        <div class= "tripby">
-            Trip by<br></br>
+          <div class= "tripby">
+              Trip by
           <img
-          className="SmallUserProfilePic"
-          src={require("../Images/TravelAgent.jpg")}
-        ></img>
+            className="SmallUserProfilePic"
+            src={require("../Images/TravelAgent.jpg")}
+            ></img>
           </div>
 
         </div>
