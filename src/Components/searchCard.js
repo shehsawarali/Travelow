@@ -15,30 +15,26 @@ class SearchResultbox extends Component {
   
   render() {
     return (
-     
-
       <div className="TripsSearchCard">
          <Link
             to="/tripdetails" style={{ textDecoration: "none", textTransform: "none"}}
           >
 
-        <div className="CardInfoContainer">
+          <div className="CardInfoContainer">
 
           <img
             className="TripImage"
-            src={require("../Images/hunza.png")}
+            src={require("../Images/muree.jpg")}
           ></img>
 
           
             <Card query={this.state}/>
-          
+          </div>
           
           <div className="TripPrice" >
             Trip Price
           </div>
-
-          
-        </div>
+        
         </Link>
 
       </div>
