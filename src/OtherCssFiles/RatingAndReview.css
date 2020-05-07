@@ -1,0 +1,10 @@
+.style1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.review-box-style {
+  height: 100px;
+  width: 200px;
+}
