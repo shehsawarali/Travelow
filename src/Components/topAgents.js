@@ -15,21 +15,26 @@ export default function topAgents() {
       </div>
 
       <div className="agentBox">
-        <div className="agentLogo"></div>
-        <div className="agentName">&nbsp; Travel One</div>
-        <div class="rating">
-          4.5
-          <span class="fa fa-star checked"></span>
+      <div className="paddingg1">
+        <div className="agentLogo">
+        </div>
+        <div className="agentName">
+            Travel One
+        </div>
+        <div class="rating">4.5
+        <span class="fa fa-star checked"></span></div>
         </div>
       </div>
 
       <div className="agentBox">
+      <div className="paddingg1">
         <div className="agentLogo2"></div>
         <div className="agentName">&nbsp; Pakistan Tours</div>
         <div class="rating">
           3.5
           <span class="fa fa-star checked"></span>
         </div>
+      </div>
       </div>
     </div>
   );
