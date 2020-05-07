@@ -31,7 +31,22 @@ export default class Home extends React.Component {
 
         <div className="TripPageGrid">
         <div className="FilterAlignment">
-        <TravelAgentFilter/>
+        <div className="SearchFilterpadding">
+                 <div className="BackgroundBox"  >
+                    <div className="SearchFilterHeadings">
+                        Filter Your search by, <br></br>
+                        Rating
+                    </div>
+
+                    <div className="SearchFilterText">
+                    5 star<br></br>
+                    between 4 and 5 star<br></br>
+                    between 3 and 4 star<br></br>
+                    between 2 and 3 star<br></br>
+                    between 1 and 2 star
+                    </div>    
+                </div>
+            </div>
         </div>
         
 

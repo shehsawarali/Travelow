@@ -11,6 +11,7 @@ export default function topAgents() {
       </div>
       
       <div className="agentBox">
+        <div className="paddingg1">
         <div className="agentLogo">
         </div>
         <div className="agentName">
@@ -18,9 +19,11 @@ export default function topAgents() {
         </div>
         <div class="rating">4.5
         <span class="fa fa-star checked"></span></div>
+        </div>
       </div>
 
       <div className="agentBox2">
+      <div className="paddingg1">
       <div className="agentLogo2">
         </div>
         <div className="agentName2">
@@ -28,6 +31,7 @@ export default function topAgents() {
         </div>
         <div class="rating">3.5
         <span class="fa fa-star checked"></span></div>
+      </div>
       </div>
     </div>
   );

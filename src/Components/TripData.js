@@ -38,7 +38,7 @@ class TripData extends Component {
                 </div>
 
                 <button className="buttonColorTripDeets ">
-                  contact us
+                  View Profile
                 </button>
               
               </div>
