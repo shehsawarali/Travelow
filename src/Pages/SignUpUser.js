@@ -1,5 +1,7 @@
 import React from "react";
 import firebase from "../config/fire";
+import {storage} from "../config/fire";
+import "firebase/storage";
 import { Link } from "react-router-dom";
 import Background from "../Images/blurredMountains.png";
 import "../OtherCssFiles/SignUpUser.css";
@@ -8,6 +10,17 @@ const database = firebase.firestore();
 const usersCollection = database.collection("Customer");
 
 class SignUpUser extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      image: null
+    }
+
+    this.signUp = this.signUp.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   signUp() {
     const emailaddress = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -37,6 +50,51 @@ class SignUpUser extends React.Component {
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  handleChange = e => {
+    if (e.target.files[0]) {
+      const image = e.target.files[0];
+      this.setState(() => ({ image }));
+    }
+  };
+
+  handleUpload = () => {
+    if(this.state.image){
+      const image = this.state.image;
+      const emailaddress = document.getElementById("email").value;
+      const UploadTask = storage.ref(`images/${emailaddress}/${image.name}`).put(image);
+      UploadTask.on(
+        "state_changed",
+        snapshot => {
+          //progress function
+          console.log("progress");
+        },
+        error => {
+          //error function
+          console.log(error);
+        },
+        () => {
+          //complete function
+          storage
+            .ref(`images/${emailaddress}`)
+            .child(image.name)
+            .getDownloadURL()
+            .then(url => {
+              console.log(url);
+              firebase.firestore().collection("Customer").doc(emailaddress).set({
+                profilePictureURL: url
+              }, {merge: true});
+
+            });
+        }
+      );
+    }
+  };
+
+  handleSubmit(){
+    this.handleUpload();
+    this.signUp();
   }
 
   render() {

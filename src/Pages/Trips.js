@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../Components/navbar";
-import SearchResultbox from "../Components/Searchcard";
+import SearchResultbox from "../Components/TripsPageCard";
 import firebase from "../config/fire";
 
 const database = firebase.firestore().collection("Trips");

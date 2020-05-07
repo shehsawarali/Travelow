@@ -2,21 +2,21 @@
 // all the Css code can be found in TravelAgentt.css
 
 import React, { Component } from "react";
-import Carddd from "./CardForTravelAgent";
+import Card from "./CardForTravelAgent";
 import TravelAgentRating from "./TravelAgentRating";
 import { Link } from "react-router-dom";
 import "../OtherCssFiles/TravelAgentt.css";
 
 class TravelAgentt extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    // var siteLink;
-    this.state = props.state;
-    // if (this.state.userType == "Travel Agent") {
-    //   siteLink = "/travelagentprofileloggedin";
-    // } else if (this.state.userType == "Customer") {
-    //   siteLink = "/travelagentprofilepublic";
-    // }
+    this.state=this.props.agent;
+    if(this.state.profilePictureURL){
+      this.setState({url: this.state.profilePictureURL});
+    }
+    else{
+      this.setState({url: "../Images/travelagent1.jpg"})
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,10 +41,10 @@ class TravelAgentt extends Component {
                 src={require("../Images/travelagent1.jpg")}
               ></img>
 
-              <Carddd />
+              <Card agent={this.props.agent} />
 
               <div className="AverageRating">
-                <TravelAgentRating />
+                <TravelAgentRating agent={this.props.agent}/>
               </div>
             </div>
           </div>

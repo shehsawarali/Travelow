@@ -5,20 +5,20 @@ import React, { Component } from "react";
 import "../OtherCssFiles/TravelAgentt.css";
 
 class TravelAgentRating extends Component {
-  state = {};
+  constructor(props){
+    super(props);
+  }
+
   render() { 
       return(  
           <div>
-              <div className="averageRatingText" >
-                Average Rating
-
-              </div>
               <div className="AverageRatingNumber">
-                  3.5
+                  {this.props.agent.rating}
                 <img
                     className="Star"
                     src={require("../Images/YellowStar.png")}
                 ></img>
+                ({this.props.agent.numberOfRatings})
               </div>
           </div>      
     );

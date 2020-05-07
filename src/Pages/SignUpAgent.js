@@ -1,12 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import firebase from "../config/fire";
+import {storage} from "../config/fire";
+import "firebase/storage";
 import Background from "../Images/blurredMountains.png";
 import "../OtherCssFiles/SignUpAgent.css";
 
 const database = firebase.firestore();
 
 class SignUpAgent extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      image: null
+    }
+
+    this.signUp = this.signUp.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+
   signUp() {
     const emailaddress = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -29,22 +44,63 @@ class SignUpAgent extends React.Component {
             contactNo: contactNo,
             OwnerCNIC: CNIC,
             userType: "Travel Agent",
-          },
-          { merge: true }
-        );
-
-        database.collection("Search Information").doc(emailaddress).set(
-          {
-            companyName: companyName,
-            description: "",
-            avg_rating: 0,
+            rating: 0,
+            numberOfRatings: 0,
           },
           { merge: true }
         );
       })
+      .then(() => {
+        this.handleUpload();
+      })
       .catch((error) => {
         console.error(error);
-      });
+      })
+  }
+
+  handleChange = e => {
+    if (e.target.files[0]) {
+      const image = e.target.files[0];
+      this.setState(() => ({ image }));
+    }
+  };
+
+  handleUpload = () => {
+    if(this.state.image){
+      const image = this.state.image;
+      const emailaddress = document.getElementById("email").value;
+      const UploadTask = storage.ref(`images/${emailaddress}/${image.name}`).put(image);
+      UploadTask.on(
+        "state_changed",
+        snapshot => {
+          //progress function
+          console.log("progress");
+        },
+        error => {
+          //error function
+          console.log(error);
+        },
+        () => {
+          //complete function
+          storage
+            .ref(`images/${emailaddress}`)
+            .child(image.name)
+            .getDownloadURL()
+            .then(url => {
+              console.log(url);
+              firebase.firestore().collection("Travel Agent").doc(emailaddress).set({
+                profilePictureURL: url
+              }, {merge: true});
+
+            });
+        }
+      );
+    }
+  };
+
+  handleSubmit(){
+    this.handleUpload();
+    this.signUp();
   }
 
   render() {
@@ -213,6 +269,7 @@ class SignUpAgent extends React.Component {
                   className="form-control image-input"
                   id="profilePicture"
                   accept="image/*"
+                  onChange={this.handleChange}
                 />
               </div>
             </form>
@@ -221,11 +278,11 @@ class SignUpAgent extends React.Component {
           <br></br>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="/">
+            {/* <Link to="/"> */}
               <button className="button-style-1" onClick={this.signUp}>
                 Sign Up
               </button>
-            </Link>
+            {/* </Link> */}
           </div>
 
           <br></br>

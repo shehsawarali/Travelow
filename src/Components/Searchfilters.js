@@ -10,16 +10,17 @@ class Filters extends Component {
             <div className="SearchFilterpadding">
                  <div className="BackgroundBox"  >
                     <div className="SearchFilterHeadings">
-                        Filter Your search by, <br></br>
-                        Rating
+                        Minimum Vendor Rating
                     </div>
 
                     <div className="SearchFilterText">
-                    5 star<br></br>
-                    between 4 and 5 star<br></br>
-                    between 3 and 4 star<br></br>
-                    between 2 and 3 star<br></br>
-                    between 1 and 2 star
+                        <select id="cars" name="cars">
+                            <option value="1star">⭐</option>
+                            <option value="2star">⭐⭐</option>
+                            <option value="3star">⭐⭐⭐</option>
+                            <option value="4star">⭐⭐⭐⭐</option>
+                            <option value="5star">⭐⭐⭐⭐⭐</option>
+                        </select>
                     </div>    
 
                     <div className="SearchFilterHeadings">
@@ -31,17 +32,17 @@ class Filters extends Component {
                                             
                     </div>
                     <div className="SearchFilterInputFeilds">
-                        <input size="20px" id="PriceLowerBound" placeholder="min cost" type="number" />
+                        <input size="20px" id="PriceLowerBound" placeholder="min cost" type="number" min="1000"/>
                         </div>
                     <div className="SearchFilterInputFeilds">
-                        <input size="20px" id="PriceUpperBound" placeholder="max cost" type="number" />
+                        <input size="20px" id="PriceUpperBound" placeholder="max cost" type="number" min="0"/>
                         </div> 
 
                     <div className="SearchFilterHeadings">
                         Number of days
                     </div>
                     <div className="SearchFilterInputFeilds">
-                    <input id="NumberofDays" placeholder="5 days" type="number" />                        
+                    <input id="NumberofDays" placeholder="5 days" type="number" min="0"/>                        
                     </div>
                     
 

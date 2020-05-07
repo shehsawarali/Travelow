@@ -4,9 +4,10 @@
 
 import React from "react";
 import NavBar from "../Components/navbar";
-import SearchResultbox from "../Components/Searchcard";
+import SearchResultbox from "../Components/searchCard";
 import Filters from "../Components/Searchfilters";
 import "../OtherCssFiles/SearchFilterr.css";
+import SearchBar2 from "../Components/SearchBar2"
 
 
 export default class SearchResults extends React.Component {
@@ -29,7 +30,9 @@ export default class SearchResults extends React.Component {
       <div>
         <div class="hero-image-contact">
           <NavBar state={this.state}/>
-          <div className="text">SEARCH RESULTS TRIP</div>
+          <div className="text">SEARCH RESULTS TRIP
+          </div>
+          <SearchBar2 />
         </div>
 
         
