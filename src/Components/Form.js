@@ -3,26 +3,55 @@ import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
-// state = {
-//     date: new Date(),
-//   };
-//   onChange = (date) => this.setState({ date });
+import firebase from '../config/fire';
+import * as timestamp from 'firebase';
+
+const database = firebase.firestore().collection("Trips");
 
 class UploadForm extends Component {
-  //   constructor() {
-  //       super()
-  //     this.handleSubmit = this.handleSubmit.bind(this);
-  //   }
+  
+  constructor(props) {
+    super(props);
+    this.state = this.props.state;
+    this.postTrip = this.postTrip.bind(this);
+  }
 
-  //   handleSubmit(event) {
-  //     event.preventDefault();
-  //     const data = new FormData(event.target);
+  postTrip() {
+    const location = document.getElementById("location").value;
+    const numberOfSeats = document.getElementById("numberOfSeats").value;
+    const tripDates = document.getElementById("tripDates").value;
+    const itinerary = document.getElementById("itinerary").value;
+    const numberOfDays = document.getElementById("numberOfDays").value;
+    const numberofNights = document.getElementById("numberOfNights").value;
+    const contactNo = document.getElementById("contactNo").value;
+    const price = document.getElementById("price").value;
+    
+    // var vendorID = "";
+    // if(this.state.useremail !== null){vendorID = this.props.useremail}
 
-  //     fetch("/api/form-submit-url", {
-  //       method: "POST",
-  //       body: data,
-  //     });
-  //   }
+    // const familyFriendly = document.getElementById("familyFriendly").value;
+    // const extreme = document.getElementById("extreme").value;
+    // const camping = document.getElementById("camping").value;
+
+    database.add(
+    {
+      location: location,
+      numberOfSeats: numberOfSeats,
+      tripDates: tripDates,
+      itinerary: itinerary,
+      numberOfDays: numberOfDays,
+      numberofNights: numberofNights,
+      contactNo: contactNo,
+      price: price,
+      lastUpdated: timestamp.firestore.Timestamp.fromDate(new Date()),
+      // vendorID: vendorID
+      // familyFriendly: familyFriendly,
+      // extreme: extreme,
+      // camping: camping
+    });
+
+    console.log("added trip");
+}
 
   render() {
     return (
@@ -30,42 +59,44 @@ class UploadForm extends Component {
         <div>
           <TextField
             required
-            id="outlined-required"
-            label="Name"
-            placeholder="Title"
-            variant="outlined"
-          />
-          <TextField
-            required
-            id="outlined-required"
+            id="location"
             label="Location"
             placeholder="Location"
             variant="outlined"
           />
           <TextField
             required
-            id="outlined-required"
+            id="price"
+            label="Price"
+            type="number"
+            variant="outlined"
+            placeholder="Price (PKR)"
+          />
+          <TextField
+            required
+            id="tripDates"
             label="Trip Dates"
             placeholder="DD/MM to DD/MM"
             variant="outlined"
           />
           <TextField
             required
-            id="outlined-required"
+            id="numberOfSeats"
             label="Number of Seats"
             placeholder="Seats"
             type="number"
+            inputProps={{ min: "1"}}
             variant="outlined"
           />
           <TextField
-            id="outlined"
-            label="Details"
+            id="itinerary"
+            label="Itinerary"
             placeholder="Trip Details"
             variant="outlined"
           />
           <TextField
             required
-            id="outlined-number"
+            id="numberOfDays"
             label="Days"
             type="number"
             variant="outlined"
@@ -73,7 +104,7 @@ class UploadForm extends Component {
           />
           <TextField
             required
-            id="outlined-number"
+            id="numberOfNights"
             label="Nights"
             type="number"
             variant="outlined"
@@ -81,7 +112,8 @@ class UploadForm extends Component {
           />
           <TextField
             required
-            id="outlined-required"
+            id="contactNo"
+            type="number"
             label="Contact Number"
             placeholder="03XX-XXXXXXX"
             variant="outlined"
@@ -89,7 +121,7 @@ class UploadForm extends Component {
         </div>
         <h3>Trip Type:</h3>
         <CheckBox />
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={this.postTrip}>
           Submit
         </Button>
       </form>
@@ -99,9 +131,9 @@ class UploadForm extends Component {
 
 function CheckBox() {
   const [state, setState] = React.useState({
-    checkedA: false,
-    checkedB: false,
-    checkedC: false,
+    familyFriendly: false,
+    extreme: false,
+    camping: false,
   });
 
   const handleChange = (event) => {
@@ -113,9 +145,9 @@ function CheckBox() {
       <FormControlLabel
         control={
           <Checkbox
-            checked={state.checkedA}
+            checked={state.familyFriendly}
             onChange={handleChange}
-            name="checkedA"
+            name="familyFriendly"
             color="primary"
           />
         }
@@ -124,9 +156,9 @@ function CheckBox() {
       <FormControlLabel
         control={
           <Checkbox
-            checked={state.checkedB}
+            checked={state.extreme}
             onChange={handleChange}
-            name="checkedB"
+            name="extreme"
             color="primary"
           />
         }
@@ -135,9 +167,9 @@ function CheckBox() {
       <FormControlLabel
         control={
           <Checkbox
-            checked={state.checkedC}
+            checked={state.camping}
             onChange={handleChange}
-            name="checkedC"
+            name="camping"
             color="primary"
           />
         }

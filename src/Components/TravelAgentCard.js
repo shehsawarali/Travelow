@@ -1,3 +1,6 @@
+// Page made by Ayesha
+// all the Css code can be found in TravelAgentt.css
+
 import React, { Component } from "react";
 import Carddd from "./CardForTravelAgent"
 import TravelAgentRating from "./TravelAgentRating"

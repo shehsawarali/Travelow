@@ -29,6 +29,7 @@ class SignUpUser extends React.Component {
             lastName: lastName,
             contactNo: contactNo,
             dob: age,
+            userType: "Customer"
           },
           { merge: true }
         );

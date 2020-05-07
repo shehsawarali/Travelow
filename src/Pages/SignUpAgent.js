@@ -28,6 +28,7 @@ class SignUpAgent extends React.Component {
             companyOwner: companyOwner,
             contactNo: contactNo,
             OwnerCNIC: CNIC,
+            userType: "Travel Agent"
           },
           { merge: true }
         );

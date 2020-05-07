@@ -1,3 +1,6 @@
+// Page made by Ayesha
+// all the Css code can be found in Tripdetails.css
+
 import React, { Component } from "react";
 import "../OtherCssFiles/Tripdetails.css"
 
