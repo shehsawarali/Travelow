@@ -25,12 +25,9 @@ class UploadTripPage extends Component {
           <div className="text">New Trip</div>
         </div>
         <div className="formFormatting">
-          <UploadForm />
+          <UploadForm state={this.state}/>
         </div>
         {/* <CheckBox /> */}
-        <Button variant="contained" color="primary">
-          Submit
-        </Button>
       </>
     );
   }
