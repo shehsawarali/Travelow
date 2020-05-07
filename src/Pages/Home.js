@@ -3,6 +3,7 @@ import NavBar from "../Components/navbar";
 import MediaCard from "../Components/featuredTrip";
 import Search from "../Components/Search";
 import TopAgents from "../Components/topAgents";
+import UserReviewCard from "../Components/UserReview";
 
 const Title = ({ title }) => {
   return (
