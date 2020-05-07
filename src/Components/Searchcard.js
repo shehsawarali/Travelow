@@ -7,7 +7,12 @@ import Card from "./card";
 import { Link } from "react-router-dom";
 
 class SearchResultbox extends Component {
-  state = {};
+  
+  constructor(props){
+    super(props);
+    this.state = props.trip;
+  }
+  
   render() {
     return (
      
@@ -25,10 +30,11 @@ class SearchResultbox extends Component {
           ></img>
 
           
-            <Card />
+            <Card trip={this.state}/>
+          
           
           <div className="TripPrice" >
-          Price: PKR 10000
+          {this.state.price}
           </div>
 
           
