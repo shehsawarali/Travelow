@@ -20,23 +20,24 @@ import firebase from "./config/fire";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.authlistener = this.authlistener.bind(this);
     this.state = {
-      useremail: null,
+      useremail: "",
       display: "Login/Signup",
     };
-    this.authlistener.bind(this);
+
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.authlistener();
   }
 
   authlistener() {
     firebase.auth().onAuthStateChanged((obj) => {
       if (obj) {
-        this.setState({ useremail: obj.email, display: obj.email });
+        this.setState({ useremail: obj.email, display: obj.email, usertype: obj.userType});
       } else {
-        this.setState({ useremail: null, display: "Login/Signup" });
+        this.setState({ useremail: null, display: "Login/Signup", userType: null});
       }
     });
   }
