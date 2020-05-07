@@ -8,11 +8,16 @@ import MediaCard from "../Components/featuredTrip";
 import UserReviewCard from "../Components/UserReview";
 import "../OtherCssFiles/TravelAgentt.css";
 import SearchBar2 from "../Components/SearchBar2";
+import Button from "@material-ui/core/Button";
 
 export default class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    var showButton = false;
     this.state = props.state;
+    if (this.state.userType == "Customer") {
+      showButton = true;
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -47,20 +52,58 @@ export default class UserProfile extends React.Component {
           <TravelAgentBar />
         </div>
 
-        <div className="Upcoming">Upcoming trips</div>
+        <div className="Upcoming">
+          Upcoming trips
+          <Button
+            variant="containedPrimary"
+            style={{ color: "white", backgroundColor: "#0f1daf", left: "60%" }}
+          >
+            See All
+          </Button>
+        </div>
 
         <div className="organize-cards">
           <MediaCard />
         </div>
 
-        <div className="Upcoming">Previous Trips</div>
+        <div className="Upcoming">
+          Previous Trips
+          <Button
+            variant="containedPrimary"
+            style={{ color: "white", backgroundColor: "#0f1daf", left: "62%" }}
+          >
+            See All
+          </Button>
+        </div>
 
         <div className="organize-cards">
           <MediaCard />
         </div>
 
         <div className="MyReviews1">
-          <h2>MY REVIEWS</h2>
+          <h2>
+            REVIEWS
+            <Button  //show this if customer is logged in
+              variant="containedPrimary"
+              style={{
+                color: "white",
+                backgroundColor: "#0f1daf",
+                left: "60%",
+              }}
+            >
+              Write Review
+            </Button>
+            <Button
+              variant="containedPrimary"
+              style={{
+                color: "white",
+                backgroundColor: "#0f1daf",
+                left: "63%",
+              }}
+            >
+              All Reviews
+            </Button>
+          </h2>
           <UserReviewCard />
           <UserReviewCard />
         </div>

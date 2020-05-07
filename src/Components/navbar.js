@@ -49,3 +49,13 @@ export default class navBar extends Component {
     );
   }
 }
+
+// dropdown option for profile and logout after conditional rendering of login is done
+{/* <Link to="/login">{this.state.display}
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>;
+</Link> */}

@@ -141,10 +141,9 @@ body {
 .SearchResultTrips {
   margin-left: auto;
   margin-right: auto;
-  width:60%;
+  width: 60%;
   align-items: left;
   align-content: left;
-
 }
 .text {
   text-align: center;
@@ -741,4 +740,29 @@ h4 {
 .searchBar2 button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.AddTripButton {
+  position: fixed;
+  bottom: 35px;
+  right: 45px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

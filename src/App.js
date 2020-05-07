@@ -12,6 +12,7 @@ import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
 import UploadTripPage from "./Pages/UploadTripPage";
 import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
+import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn"
 import { Route } from "react-router-dom";
 
 /*SHEHSAWAR*/
@@ -24,6 +25,7 @@ class App extends React.Component {
     this.state = {
       useremail: "",
       display: "Login/Signup",
+      userType: "",
     };
 
   }
@@ -67,6 +69,14 @@ class App extends React.Component {
           path="/travelagentprofilepublic"
           render={(props) => (
             <TravelAgentProfilePublic {...props} state={this.state} />
+          )}
+        ></Route>
+
+        <Route
+          exact
+          path="/travelagentprofileloggedin"
+          render={(props) => (
+            <AgentProfileLoggedIn {...props} state={this.state} />
           )}
         ></Route>
 

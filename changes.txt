@@ -1,0 +1,7 @@
+-check usertype logged in to redirect page of travel agent
+-check comment on TravelAgentProfilePublic.js line 86
+-after login redirect to homescreen without need to press the cross
+-handle logout and dropdown(code in navbar file)
+-image slider
+-upload image in trip form
+-render submit button in trip form
