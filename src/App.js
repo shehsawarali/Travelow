@@ -11,8 +11,8 @@ import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
 import UploadTripPage from "./Pages/UploadTripPage";
-import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
-import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn"
+import TravelAgentProfile from "./Pages/TravelAgentProfile";
+import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn";
 import WriteReview from "./Pages/RatingAndReview";
 import { Route } from "react-router-dom";
 
@@ -28,7 +28,6 @@ class App extends React.Component {
       display: "Login/Signup",
       userType: "",
     };
-    
   }
 
   componentWillMount() {
@@ -38,9 +37,17 @@ class App extends React.Component {
   authlistener() {
     firebase.auth().onAuthStateChanged((obj) => {
       if (obj) {
-        this.setState({ useremail: obj.email, display: obj.email, usertype: obj.userType});
+        this.setState({
+          useremail: obj.email,
+          display: obj.email,
+          usertype: obj.userType,
+        });
       } else {
-        this.setState({ useremail: null, display: "Login/Signup", userType: null});
+        this.setState({
+          useremail: null,
+          display: "Login/Signup",
+          userType: null,
+        });
       }
     });
   }
@@ -67,9 +74,9 @@ class App extends React.Component {
 
         <Route
           exact
-          path="/travelagentprofilepublic"
+          path="/travelagentprofile"
           render={(props) => (
-            <TravelAgentProfilePublic {...props} state={this.state} />
+            <TravelAgentProfile {...props} state={this.state} />
           )}
         ></Route>
 
