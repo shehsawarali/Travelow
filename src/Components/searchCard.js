@@ -15,14 +15,13 @@ class SearchResultbox extends Component {
   
   render() {
     return (
-     
-
       <div className="TripsSearchCard">
          <Link
             to="/tripdetails" style={{ textDecoration: "none", textTransform: "none"}}
           >
 
-        <div className="CardInfoContainer">
+        <div className="completecover">
+          <div className="CardInfoContainer">
 
           <img
             className="TripImage"
@@ -31,12 +30,11 @@ class SearchResultbox extends Component {
 
           
             <Card query={this.state}/>
-          
+          </div>
           
           <div className="TripPrice" >
             Trip Price
           </div>
-
           
         </div>
         </Link>

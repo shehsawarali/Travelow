@@ -4,6 +4,7 @@ import MediaCard from "../Components/featuredTrip";
 import Search from "../Components/Search";
 import TopAgents from "../Components/topAgents";
 import UserReviewCard from "../Components/UserReview";
+import { Link } from "react-router-dom";
 
 const Title = ({ title }) => {
   return (
@@ -39,7 +40,27 @@ export default class Home extends React.Component {
           <div class="hero-text-white">DISCOVER &nbsp;</div>
           <div class="hero-text-black">PAKISTAN.</div>
           <div position="relative">
-            <Search />
+          <div>
+                <div>
+                    <div className = "searchBar">
+
+                        <input label="Search" icon="search" placeholder={'Search Travelow'} onChange={this.searchHandler} height='10px'></input>
+
+                        <select value={this.state.Destination} onChange={this.handleType}>
+                            <option>Destination</option>
+                            <option>Travel Agent</option>
+                        </select>
+
+                        
+
+                        <Link to="/searchresults">
+                            <button className="searchButton" onClick={this.query}><span>Search</span></button>
+                        </Link>
+
+                        {/* <button className="searchButton" onClick={this.logout}><span>Logout</span></button> */}
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         <Title title="-FEATURED TRIPS-" />
