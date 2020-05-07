@@ -4,7 +4,7 @@
 
 import React from "react";
 import NavBar from "../Components/navbar";
-import SearchResultbox from "../Components/Searchcard";
+import SearchResultbox from "../Components/searchCard";
 import Filters from "../Components/Searchfilters";
 import "../OtherCssFiles/SearchFilterr.css";
 
