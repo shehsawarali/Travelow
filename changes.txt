@@ -5,3 +5,4 @@
 -image slider
 -upload image in trip form
 -render submit button in trip form
+-Error handling in tripupload from
