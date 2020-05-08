@@ -3,12 +3,13 @@ import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
-import firebase from "../config/fire";
-import * as timestamp from "firebase";
+import firebase from '../config/fire';
+import * as timestamp from 'firebase';
 
 const database = firebase.firestore().collection("Trips");
 
 class UploadForm extends Component {
+  
   constructor(props) {
     super(props);
     this.state = this.props.state;
@@ -24,15 +25,17 @@ class UploadForm extends Component {
     const numberofNights = document.getElementById("numberOfNights").value;
     const contactNo = document.getElementById("contactNo").value;
     const price = document.getElementById("price").value;
-
-    // var vendorID = "";
+    const depLocation = document.getElementById("departure").value;
+    
+    const vendorID = this.props.state.useremail;
     // if(this.state.useremail !== null){vendorID = this.props.useremail}
 
     // const familyFriendly = document.getElementById("familyFriendly").value;
     // const extreme = document.getElementById("extreme").value;
     // const camping = document.getElementById("camping").value;
 
-    database.add({
+    database.add(
+    {
       location: location,
       numberOfSeats: numberOfSeats,
       tripDates: tripDates,
@@ -42,32 +45,27 @@ class UploadForm extends Component {
       contactNo: contactNo,
       price: price,
       lastUpdated: timestamp.firestore.Timestamp.fromDate(new Date()),
-      // vendorID: vendorID
+      vendorID: vendorID,
+      departureFrom: depLocation
       // familyFriendly: familyFriendly,
       // extreme: extreme,
       // camping: camping
+    })
+    .then(function(docRef) {
+      database.doc(docRef.id).set({
+        tripID: docRef.id
+      }, {merge: true})
+    })
+    .catch(function(error) {
+      console.error("Encountered error in posting trip: ", error);
     });
 
     console.log("added trip");
-  }
+}
 
   render() {
     return (
-      <form
-        noValidate="false"
-        autoComplete="off"
-        onSubmit={this.handleSubmit}
-        style={{
-          marginLeft: "1%",
-          marginRight: "1%",
-          marginTop: "1%",
-          marginBottom: "1%",
-          paddingTop: "1%",
-          paddingBottom: "1%",
-          paddingRight: "1%",
-          paddingLeft: "1%"
-        }}
-      >
+      <form noValidate="false" autoComplete="off" onSubmit={this.handleSubmit}>
         <div>
           <TextField
             required
@@ -85,6 +83,12 @@ class UploadForm extends Component {
             placeholder="Price (PKR)"
           />
           <TextField
+            id="departure"
+            label="Departure From"
+            placeholder="Departure From"
+            variant="outlined"
+          />
+          <TextField
             required
             id="tripDates"
             label="Trip Dates"
@@ -97,7 +101,7 @@ class UploadForm extends Component {
             label="Number of Seats"
             placeholder="Seats"
             type="number"
-            inputProps={{ min: "1" }}
+            inputProps={{ min: "1"}}
             variant="outlined"
           />
           <TextField
