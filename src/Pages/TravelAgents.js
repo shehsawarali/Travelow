@@ -37,11 +37,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        {/* sets up top of the page */}
         <div class="hero-image-contact">
           <NavBar state={this.state} />
           <div className="text">Top Rated Travel Agents</div>
         </div>
 
+        {/* This prints all the cards representing travel agents in our system */}
         <div className="MyReviews2">
           {this.state.data.map(function(d, idx){
             return (

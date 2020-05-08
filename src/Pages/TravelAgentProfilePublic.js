@@ -31,6 +31,7 @@ export default class UserProfile extends React.Component {
   render() {
     return (
       <div>
+        {/* sets up the top of the page */}
         <div class="hero-image-contact">
           <NavBar state={this.state}></NavBar>
           <img
@@ -38,7 +39,10 @@ export default class UserProfile extends React.Component {
             src={require("../Images/Travel agency.png")}
           ></img>
         </div>
-
+        
+        
+        
+        {/* these couple of lines give the compnay information */}
         <div className="CompanyName">Company Name</div>
 
         <div className="Address">Company address</div>
@@ -48,13 +52,20 @@ export default class UserProfile extends React.Component {
         <div className="Address">
           A short Company Description can be put here
         </div>
-
+        
+        
+        
+        {/* this bar contains the contact information of the company as a flex */}
         <div className="padding">
           <TravelAgentBar />
         </div>
-
+        
+        
+        
         <div className="Upcoming">
           Upcoming trips
+          {/* button to see all upcoming trips is not implimented as it was not part of our
+          use cases but it might be a fuctionality that can be added later */}
           <Button
             variant="containedPrimary"
             style={{ color: "white", backgroundColor: "#0f1daf", left: "60%" }}
@@ -62,30 +73,44 @@ export default class UserProfile extends React.Component {
             See All
           </Button>
         </div>
-
+        
+        
+        
+        
+        {/* tells about all the upcoming trips */}
         <div className="organize-cards">
           <MediaCard />
         </div>
 
+        
+        
         <div className="Upcoming">
           Previous Trips
+          {/* button to see all previous trips is not implimented as it was not part of our
+          use cases but it might be a fuctionality that can be added later */}
           <Button
             variant="containedPrimary"
             style={{ color: "white", backgroundColor: "#0f1daf", left: "62%" }}
           >
             See All
           </Button>
+        
+        
+       
+       
         </div>
-
+          {/* tells about all the previous trips */}
         <div className="organize-cards">
           <MediaCard />
         </div>
 
+       
+          {/* these are all the reviews this travel agent has */}
         <div className="MyReviews1">
           <h2>
             REVIEWS
             <Link to="/rateandreview">
-            <Button  //show this if customer is logged in
+            <Button  //show this if customer is logged in and then they can also add a review
               variant="containedPrimary"
               style={{
                 color: "white",
@@ -96,7 +121,7 @@ export default class UserProfile extends React.Component {
               Write Review
             </Button>
               </Link>
-            
+            {/* all reviews can be seen by prssing this button. hasnt been implimeted yet */}
             <Button
               variant="containedPrimary"
               style={{
@@ -107,6 +132,8 @@ export default class UserProfile extends React.Component {
             >
               All Reviews
             </Button>
+
+            {/* //user revirw are displayed here */}
           </h2>
           <UserReviewCard />
           <UserReviewCard />

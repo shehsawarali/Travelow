@@ -27,6 +27,7 @@ class Tripdetails extends Component {
   render() {
     return (
       <div>
+        {/* sets up the top of travel agent page */}
         <div class="hero-image-contact">
           <NavBar state={this.state} />
           <div className="text">Trip Name</div>
@@ -34,14 +35,21 @@ class Tripdetails extends Component {
         </div>
 
         <div className="TripTop">
+          {/* image that shows the place where the trip is going */}
           <img
             className="TripImage2"
             src={require("../Images/bhawalpur.png")}
           ></img>
+          {/* displayes major data of the trip such as price etc */}
           <TripData />
         </div>
-
+        {/* this is a bar like structure that tells the trips properties ie is it hiking
+        is it family oriented hotel etc */}
         <TripProerties />
+
+
+        {/* here we have a background image on which we have the itineary and also the
+        image of the acomodation */}
 
         <div className="Backgroundd">
           <div className="makeAFlex">
@@ -69,6 +77,8 @@ class Tripdetails extends Component {
           </div>
         </div>
 
+        
+        {/* The reviews on this trip are shown here. we can also write a review here */}
         <div className="MyReviews1">
           <h2>Reviews on previous trips
             <Link to="/rateandreview">

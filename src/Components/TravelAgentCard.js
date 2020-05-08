@@ -29,6 +29,7 @@ class TravelAgentt extends Component {
   render() {
     return (
       <div>
+        {/* this whole card is linked to travel agent public profile so a user is always directed there */}
         <Link
           to="/travelagentprofilepublic"
           style={{ textDecoration: "none", textTransform: "none" }}
@@ -36,11 +37,12 @@ class TravelAgentt extends Component {
         >
           <div className="TravelAgentSearchCard">
             <div className="CardInfoContainer">
+              {/* image of the travel agent */}
               <img
                 className="TravelAgencyImage"
                 src={require("../Images/travelagent1.jpg")}
               ></img>
-
+                {/* info of the travel agent */}
               <Card agent={this.props.agent} />
 
               <div className="AverageRating">

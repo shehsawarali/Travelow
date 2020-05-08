@@ -46,13 +46,14 @@ class ContactUs extends React.Component {
   render() {
     return (
       <div>
+        {/* this sets up the top of the page */}
         <div className="hero-image-contact">
           <NavBar state={this.state}/>
           <div className="text">CONTACT US</div>
         </div>
 
         
-
+        {/* the following code involves input fields and their headings */}
         <div className="text-body1">First Name</div>
 
         <div className="text-body2">

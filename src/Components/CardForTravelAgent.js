@@ -3,6 +3,8 @@
 import React, { Component } from "react";
 import "../OtherCssFiles/TravelAgentt.css";
 
+
+// this is the card that contais travel agent info and name
 class Carddd extends Component {
     render() {
         return (
