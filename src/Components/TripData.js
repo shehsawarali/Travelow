@@ -2,28 +2,31 @@
 // css deatils can be found in tRipdrails.css in otherCssfiles folder
 
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "../OtherCssFiles/Tripdetails.css"
 
 class TripData extends Component {
+
+  constructor(props){
+    super(props);
+  }
     render() {
         return (
           <div >
             <div className="boxpadding">
               <div className="box">
-                PKR 21,500
+                Rs {this.props.trip.price}
               </div>
             </div>
 
             <div className="boxpadding">
               <div className="box">
-                Seats remaining:10
+                Number of seats: {this.props.trip.numberOfSeats}
               </div>
             </div>
             
             <div className="boxpadding">
               <div className="box">
-                20th july 2020 to 15th july 2020
+                Dates: {this.props.trip.tripDates}<br></br>
                 Departure from: Lahore
               </div>
             </div>
@@ -35,16 +38,12 @@ class TripData extends Component {
                   className="SmallUserProfilePic1"
                   src={require("../Images/TravelAgent.jpg")}>
                   </img>
-                  Global travel
+                  {this.props.trip.vendorID}
                 </div>
 
-                <Link to="/travelagentprofilepublic">
-                <button  className="buttonColorTripDeets ">
-                  View Profile
+                <button className="buttonColorTripDeets ">
+                  contact us
                 </button>
-              </Link>
-
-
               
               </div>
             </div>
