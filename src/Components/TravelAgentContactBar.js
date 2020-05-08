@@ -5,41 +5,46 @@ import React, { Component } from "react";
 import "../OtherCssFiles/Tripdetails.css"
 
 class TravelAgentBar extends Component {
-    render() {
-        return (
-        <div className="barr2">
-          
-          <div className="pair">
-          <img
-          className="imgg2"
-          src={require("../Images/ContactUs.png")}>           
-          </img>
 
-          Contact Number
+  constructor(props){
+    super(props);
+  }
+  
+  render() {
+    return (
+    <div className="barr2">
+      
+      <div className="pair">
+      <img
+      className="imgg2"
+      src={require("../Images/ContactUs.png")}>           
+      </img>
 
-          </div>
-          
-          <div className="pair">
-          <img
-          className="imgg2"
-          src={require("../Images/InternetSymbol.png")}>           
-          </img>
+      {this.props.agent.contactNo}
 
-          website link
-          </div>
-          <div className="pair">
-          <img
-          className="imgg2"
-          src={require("../Images/EmailSymbol.png")}>           
-          </img>
+      </div>
+      
+      <div className="pair">
+      <img
+      className="imgg2"
+      src={require("../Images/InternetSymbol.png")}>           
+      </img>
 
-          email
+      Unlisted 
+      </div>
+      <div className="pair">
+      <img
+      className="imgg2"
+      src={require("../Images/EmailSymbol.png")}>           
+      </img>
 
-          </div>
+      {this.props.agent.email}
 
-          </div> 
-        );
-    }
+      </div>
+
+      </div> 
+    );
+  }
 }
 
 export default TravelAgentBar;
