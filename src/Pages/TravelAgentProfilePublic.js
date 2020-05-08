@@ -1,4 +1,3 @@
-// Page made by Ayesha
 // CSS code can be found primarily in TravelAgentt.css and some in App.css
 
 import React from "react";

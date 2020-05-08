@@ -28,8 +28,9 @@ import "./Fonts/NotoSansJP-Light.otf";
 
 ReactDOM.render(
   <Router>
-    <App />
+    <App />,
   </Router>,
+  
   document.getElementById("root")
 );
 

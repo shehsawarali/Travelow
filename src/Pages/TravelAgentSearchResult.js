@@ -5,10 +5,10 @@ import React, { Component } from "react";
 import NavBar from "../Components/navbar";
 import "../OtherCssFiles/TravelAgentt.css";
 import TravelAgentt from "../Components/TravelAgentCard";
-import TravelAgentFilter from "../Components/TravelAgentSearchResult";
+// import TravelAgentFilter from "../Components/TravelAgentSearchResult";
 import "../OtherCssFiles/SearchFilterr.css";
 
-export default class Home extends React.Component {
+export default class TravelAgentSearchResult extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.state;
@@ -33,22 +33,22 @@ export default class Home extends React.Component {
 
         {/* search filter for travel agent page */}
         <div className="TripPageGrid">
-        <div className="FilterAlignment">
-        <div className="SearchFilterpadding">
-                 <div className="BackgroundBox"  >
-                    <div className="SearchFilterHeadings">
-                        Filter Your search by, <br></br>
-                        Rating
-                    </div>
-
-                    <div className="SearchFilterText">
-                    5 star<br></br>
-                    between 4 and 5 star<br></br>
-                    between 3 and 4 star<br></br>
-                    between 2 and 3 star<br></br>
-                    between 1 and 2 star
-                    </div>    
+          <div className="FilterAlignment">
+            <div className="SearchFilterpadding">
+              <div className="BackgroundBox">
+                <div className="SearchFilterHeadings">
+                  Filter Your search by, <br></br>
+                  Rating
                 </div>
+
+                <div className="SearchFilterText">
+                  5 star<br></br>
+                  between 4 and 5 star<br></br>
+                  between 3 and 4 star<br></br>
+                  between 2 and 3 star<br></br>
+                  between 1 and 2 star
+                </div>
+              </div>
             </div>
         </div>
         
@@ -57,11 +57,8 @@ export default class Home extends React.Component {
         <TravelAgentt />
         <TravelAgentt />
         </div>
-    </div>
-
       </div>
-      
+      </div>
     );
   }
 }
-

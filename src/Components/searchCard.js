@@ -7,12 +7,11 @@ import Card from "./searchSubcard";
 import { Link } from "react-router-dom";
 
 class SearchResultbox extends Component {
-  
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = props.query;
   }
-  
+
   render() {
     return (
       <div className="TripsSearchCard">
@@ -37,13 +36,12 @@ class SearchResultbox extends Component {
           <div className="TripPrice" >
             Trip Price
           </div>
-        
-        </Link>
 
+          <div className="TripPrice">Trip Price</div>
+        </Link>
       </div>
     );
   }
 }
 
 export default SearchResultbox;
-
