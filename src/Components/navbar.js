@@ -35,7 +35,7 @@ export default class navBar extends Component {
   }
 
   render() {
-    if (this.state.username != null || this.state.username != "") {
+    if (this.state.usertype == "Customer") {
       return (
         <nav>
           <ul>
@@ -69,7 +69,7 @@ export default class navBar extends Component {
           </ul>
         </nav>
       );
-    } else {
+    } else if (this.state.userType == "Travel Agent") {
       return (
         <nav>
           <ul>
@@ -88,7 +88,51 @@ export default class navBar extends Component {
               <Link to="/contactus">Contact Us</Link>
             </li>
             <li>
-              <Link to="/login">{this.state.display}</Link>
+              <Link to="/login">
+                <div class="dropdown">
+                  <div class="dropbtn">{this.state.display}</div>
+                  <div class="dropdown-content">
+                    <a>
+                      <Link to="/travelagentprofileloggedin">Profile</Link>
+                    </a>
+                    <a onClick={this.logout}>Log Out</a>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      );
+    } else if (this.state.username == null || this.state.username == "") {
+      return (
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <div className="logo">TRAVELOW</div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/trips">Trips</Link>
+            </li>
+            <li>
+              <Link to="/travelagents">Travel Agents</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/login">
+                <div class="dropdown">
+                  <div class="dropbtn">{this.state.display}</div>
+                  <div class="dropdown-content">
+                    <a>
+                      <Link to="/travelagentprofileloggedin">Profile</Link>
+                    </a>
+                    <a onClick={this.logout}>Log Out</a>
+                  </div>
+                </div>
+              </Link>
             </li>
           </ul>
         </nav>

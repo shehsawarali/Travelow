@@ -26,7 +26,7 @@ export default class AgentProfile extends React.Component {
   }
 
   render() {
-    if (this.loggedInUser === "Travel Agent") {
+    if (this.state.userType === "Travel Agent") {
       return (
         <>
           <div>
@@ -94,7 +94,7 @@ export default class AgentProfile extends React.Component {
             <div className="MyReviews1">
               <h2>
                 MY REVIEWS
-                {/* <Button
+                <Button
                 variant="containedPrimary"
                 style={{
                   color: "white",
@@ -103,7 +103,7 @@ export default class AgentProfile extends React.Component {
                 }}
               >
                 All Reviews
-              </Button> */}
+              </Button>
               </h2>
               <UserReviewCard />
               <UserReviewCard />
@@ -118,7 +118,7 @@ export default class AgentProfile extends React.Component {
           </div>
         </>
       );
-    } else if (this.loggedInUser === "Customer") {
+    } else if (this.state.userType == "Customer") {
       return (
         <div>
           <div class="hero-image-contact">

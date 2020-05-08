@@ -83,7 +83,6 @@ export default class SearchResults extends React.Component {
                     <div className="SearchFilterInputFeilds">
                     <input id="DepartureFrom" placeholder="Lahore" type="text" />
                     </div>
-                    .
                 </div>
             </div>
         </div>
