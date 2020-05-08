@@ -23,38 +23,77 @@ export default class navBar extends Component {
   }
   //   SHEHSAWAR
   logout() {
-    firebase.auth().signOut().then((result) => {
-      this.setState({
-        user: null,
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        console.log("Logged out");
+      })
+      .catch((err) => {
+        console.log("Error: " + err.toString());
       });
-    });
   }
 
-
   render() {
-    return (
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">
-              <div className="logo">TRAVELOW</div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/trips">Trips</Link>
-          </li>
-          <li>
-            <Link to="/travelagents">Travel Agents</Link>
-          </li>
-          <li>
-            <Link to="/contactus">Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/login">{this.state.display}</Link>
-          </li>
-        </ul>
-      </nav>
-    );
+    if (this.state.username != null || this.state.username != "") {
+      return (
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <div className="logo">TRAVELOW</div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/trips">Trips</Link>
+            </li>
+            <li>
+              <Link to="/travelagents">Travel Agents</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/login">
+                <div class="dropdown">
+                  <div class="dropbtn">{this.state.display}</div>
+                  <div class="dropdown-content">
+                    <a>
+                      <Link to="/user">Profile</Link>
+                    </a>
+                    <a onClick={this.logout}>Log Out</a>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      );
+    } else {
+      return (
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <div className="logo">TRAVELOW</div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/trips">Trips</Link>
+            </li>
+            <li>
+              <Link to="/travelagents">Travel Agents</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/login">{this.state.display}</Link>
+            </li>
+          </ul>
+        </nav>
+      );
+    }
   }
 }
 
