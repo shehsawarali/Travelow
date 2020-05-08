@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef3a8767.chunk.css",
-    "main.js": "/static/js/main.c869040f.chunk.js",
-    "main.js.map": "/static/js/main.c869040f.chunk.js.map",
+    "main.css": "/static/css/main.df8859ac.chunk.css",
+    "main.js": "/static/js/main.1f86eb57.chunk.js",
+    "main.js.map": "/static/js/main.1f86eb57.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.07596b36.js",
     "runtime-main.js.map": "/static/js/runtime-main.07596b36.js.map",
-    "static/js/2.15e4d20f.chunk.js": "/static/js/2.15e4d20f.chunk.js",
-    "static/js/2.15e4d20f.chunk.js.map": "/static/js/2.15e4d20f.chunk.js.map",
+    "static/js/2.ce2ff796.chunk.js": "/static/js/2.ce2ff796.chunk.js",
+    "static/js/2.ce2ff796.chunk.js.map": "/static/js/2.ce2ff796.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b1519c64445ae8eb0df65d89633d317c.js": "/precache-manifest.b1519c64445ae8eb0df65d89633d317c.js",
+    "precache-manifest.cb04f049a5b025f45e9b34084d1a58ce.js": "/precache-manifest.cb04f049a5b025f45e9b34084d1a58ce.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.ef3a8767.chunk.css.map": "/static/css/main.ef3a8767.chunk.css.map",
-    "static/js/2.15e4d20f.chunk.js.LICENSE.txt": "/static/js/2.15e4d20f.chunk.js.LICENSE.txt",
+    "static/css/main.df8859ac.chunk.css.map": "/static/css/main.df8859ac.chunk.css.map",
+    "static/js/2.ce2ff796.chunk.js.LICENSE.txt": "/static/js/2.ce2ff796.chunk.js.LICENSE.txt",
     "static/media/5stars.png": "/static/media/5stars.9e1bb5d1.png",
     "static/media/EmailSymbol.png": "/static/media/EmailSymbol.68769fba.png",
+    "static/media/Hunzahotel.jpg": "/static/media/Hunzahotel.f1538396.jpg",
     "static/media/InternetSymbol.png": "/static/media/InternetSymbol.1904b280.png",
     "static/media/Jost-Light.ttf": "/static/media/Jost-Light.2c90adb8.ttf",
     "static/media/Jost-Medium.ttf": "/static/media/Jost-Medium.a8e5c855.ttf",
-    "static/media/MountainBachground.jpg": "/static/media/MountainBachground.683eec85.jpg",
+    "static/media/Tripdetails.css": "/static/media/MountainBachground.683eec85.jpg",
     "static/media/NotoSansJP-Light.otf": "/static/media/NotoSansJP-Light.5da08a6f.otf",
     "static/media/NotoSansJP-Medium.otf": "/static/media/NotoSansJP-Medium.366120c9.otf",
     "static/media/App.css": "/static/media/smallerBackground.f64b36b1.jpg",
@@ -35,8 +36,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.07596b36.js",
-    "static/js/2.15e4d20f.chunk.js",
-    "static/css/main.ef3a8767.chunk.css",
-    "static/js/main.c869040f.chunk.js"
+    "static/js/2.ce2ff796.chunk.js",
+    "static/css/main.df8859ac.chunk.css",
+    "static/js/main.1f86eb57.chunk.js"
   ]
 }
