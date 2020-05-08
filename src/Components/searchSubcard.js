@@ -7,7 +7,7 @@ class Card extends Component {
     super(props);
     this.state = props.query;
   }
-
+  // this page has the info of the trip such as its name who is it by etc
   render() {
       return (
         <div >

@@ -10,17 +10,23 @@ import "../OtherCssFiles/Tripdetails.css";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { render } from "@testing-library/react";
+import { withRouter } from 'react-router-dom';
+import { Route } from "react-router-dom";
 
 class Tripdetails extends Component {
   constructor(props) {
     super(props);
-    this.state = props.state;
+    this.state = {
+      user: this.props.state,
+      trip: this.props.location.state.trip
+    }
+    // console.log(this.props.trip);
+    console.log(this.props.location.state);
   }
 
   componentWillReceiveProps(nextProps) {
-    // You don't have to do this check first, but it can help prevent an unneeded render
-    if (nextProps.state !== this.state) {
-      this.setState(nextProps.state);
+    if (nextProps.state !== this.state.user) {
+      this.setState({user: nextProps.state});
     }
   }
 
@@ -28,9 +34,9 @@ class Tripdetails extends Component {
     return (
       <div>
         <div class="hero-image-contact">
-          <NavBar state={this.state} />
-          <div className="text">Trip Name</div>
-          <div className="text1">NOTE: contact travel agent directly</div>
+          <NavBar state={this.state.user}/>
+          <div className="text">{this.props.location.state.trip.location}</div>
+          <div className="text1">By: {this.props.location.state.trip.vendorID}</div>
         </div>
 
         <div className="TripTop">
@@ -38,16 +44,16 @@ class Tripdetails extends Component {
             className="TripImage2"
             src={require("../Images/bhawalpur.png")}
           ></img>
-          <TripData />
+          <TripData trip={this.state.trip}/>
         </div>
 
-        <TripProerties />
-
+        <TripProerties trip={this.state.trip}/>
+        
         <div className="Backgroundd">
           <div className="makeAFlex">
             <div className="AddPadiing">
-              <div className="Itineary">
-                <div className="ItinearyHeading">
+              <div className="Itinerary">
+                <div className="ItineraryHeading">
                 Itineary
                 </div>   
                 departure from lahore at 2 pm<br></br>
@@ -71,7 +77,10 @@ class Tripdetails extends Component {
 
         <div className="MyReviews1">
           <h2>Reviews on previous trips
-            <Link to="/rateandreview">
+          <Link to={{
+           pathname:'/ratetrip',
+           state:{trip: this.state.trip}
+          }}>
             <Button  //show this if customer is logged in
               variant="containedPrimary"
               style={{
@@ -92,4 +101,4 @@ class Tripdetails extends Component {
   }
 }
 
-export default Tripdetails;
+export default withRouter(Tripdetails);

@@ -24,11 +24,14 @@ export default class TravelAgentSearchResult extends React.Component {
   render() {
     return (
       <div>
+        {/* sets up top of the page */}
         <div class="hero-image-contact">
           <NavBar state={this.state} />
           <div className="text">SEARCH RESULT TRAVEL AGENT </div>
         </div>
 
+
+        {/* search filter for travel agent page */}
         <div className="TripPageGrid">
           <div className="FilterAlignment">
             <div className="SearchFilterpadding">
@@ -47,13 +50,14 @@ export default class TravelAgentSearchResult extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="MyReviews2">
-            <TravelAgentt />
-            <TravelAgentt />
-          </div>
         </div>
+        
+        {/* all the cards of the travel agent will be displayed here */}
+        <div className="MyReviews2">
+        <TravelAgentt />
+        <TravelAgentt />
+        </div>
+      </div>
       </div>
     );
   }

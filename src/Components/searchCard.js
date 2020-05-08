@@ -15,17 +15,26 @@ class SearchResultbox extends Component {
   render() {
     return (
       <div className="TripsSearchCard">
-        <Link
-          to="/tripdetails"
-          style={{ textDecoration: "none", textTransform: "none" }}
-        >
-          <div className="CardInfoContainer">
-            <img
-              className="TripImage"
-              src={require("../Images/muree.jpg")}
-            ></img>
+        {/* this card is being linked to a new page trip details so the whole card is responsive */}
+         <Link
+            to="/tripdetails" style={{ textDecoration: "none", textTransform: "none"}}
+          >
 
-            <Card query={this.state} />
+          <div className="CardInfoContainer">
+          {/* image of the trip */}
+          <img
+            className="TripImage"
+            src={require("../Images/Hunzahotel.jpg")}
+          ></img>
+
+          {/* a card was imported */}
+            <Card query={this.state}/>
+          </div>
+
+          {/* trip price is displayed and is the only thing that is right aligned */}
+          
+          <div className="TripPrice" >
+            Trip Price
           </div>
 
           <div className="TripPrice">Trip Price</div>
