@@ -15,7 +15,7 @@ class  TripProerties extends Component {
           src={require("../Images/tick.png")}>           
           </img>
 
-          Suitable for families
+          Family-friendly
 
           </div>
           
@@ -25,7 +25,7 @@ class  TripProerties extends Component {
           src={require("../Images/tick.png")}>           
           </img>
 
-          Hiking
+          Extreme
           </div>
           <div className="pair">
           <img
@@ -33,7 +33,7 @@ class  TripProerties extends Component {
           src={require("../Images/tick.png")}>           
           </img>
 
-          hotel stay
+          Camping
 
           </div>
 
