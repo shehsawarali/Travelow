@@ -16,7 +16,6 @@ export default class AgentProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.state;
-    this.loggedInUser = props.state.userType;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -214,7 +213,7 @@ export default class AgentProfile extends React.Component {
           </div>
         </div>
       );
-    } else if (this.loggedInUser == null) {
+    } else {
       return (
         <div>
           <div class="hero-image-contact">

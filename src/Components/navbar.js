@@ -30,7 +30,6 @@ export default class navBar extends Component {
     });
   }
 
-  
 
   render() {
     return (

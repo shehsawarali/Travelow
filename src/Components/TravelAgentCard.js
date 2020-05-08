@@ -8,13 +8,14 @@ import { Link } from "react-router-dom";
 import "../OtherCssFiles/TravelAgentt.css";
 
 class TravelAgentt extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    this.state = this.props.agent;
-    if (this.state.profilePictureURL) {
-      this.setState({ url: this.state.profilePictureURL });
-    } else {
-      this.setState({ url: "../Images/travelagent1.jpg" });
+    this.state=this.props.agent;
+    if(this.state.profilePictureURL){
+      this.setState({url: this.state.profilePictureURL});
+    }
+    else{
+      this.setState({url: "../Images/travelagent1.jpg"})
     }
   }
 
@@ -29,7 +30,7 @@ class TravelAgentt extends Component {
     return (
       <div>
         <Link
-          to="/travelagentprofile"
+          to="/travelagentprofileloggedin"
           style={{ textDecoration: "none", textTransform: "none" }}
           cond
         >
@@ -43,7 +44,7 @@ class TravelAgentt extends Component {
               <Card agent={this.props.agent} />
 
               <div className="AverageRating">
-                <TravelAgentRating agent={this.props.agent} />
+                <TravelAgentRating agent={this.props.agent}/>
               </div>
             </div>
           </div>

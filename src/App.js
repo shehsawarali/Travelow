@@ -11,7 +11,7 @@ import SignUpUser from "./Pages/SignUpUser";
 import SignUpAgent from "./Pages/SignUpAgent";
 import UserProfile from "./Pages/UserProfile";
 import UploadTripPage from "./Pages/UploadTripPage";
-import TravelAgentProfile from "./Pages/TravelAgentProfile";
+import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
 import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn";
 import WriteReview from "./Pages/RatingAndReview";
 import { Route } from "react-router-dom";
@@ -74,9 +74,9 @@ class App extends React.Component {
 
         <Route
           exact
-          path="/travelagentprofile"
+          path="/travelagentprofilepublic"
           render={(props) => (
-            <TravelAgentProfile {...props} state={this.state} />
+            <TravelAgentProfilePublic {...props} state={this.state} />
           )}
         ></Route>
 

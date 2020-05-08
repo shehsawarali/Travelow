@@ -8,7 +8,6 @@ import "./Fonts/Jost-Light.ttf";
 import "./Fonts/Jost-Medium.ttf";
 import "./Fonts/NotoSansJP-Medium.otf";
 import "./Fonts/NotoSansJP-Light.otf";
-import TravelAgentProfile from "./Pages/TravelAgentProfile"
 
 // const firebase = require("firebase");
 // require("firebase/firestore");
@@ -30,7 +29,6 @@ import TravelAgentProfile from "./Pages/TravelAgentProfile"
 ReactDOM.render(
   <Router>
     <App />,
-    <TravelAgentProfile />
   </Router>,
   
   document.getElementById("root")
