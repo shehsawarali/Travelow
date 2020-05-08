@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../Components/navbar";
 import MediaCard from "../Components/featuredTrip";
-import Search from "../Components/Search";
 import TopAgents from "../Components/topAgents";
 import UserReviewCard from "../Components/UserReview";
 import { Link } from "react-router-dom";
@@ -22,7 +21,6 @@ export default class Home extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // You don't have to do this check first, but it can help prevent an unneeded render
     if (nextProps.state !== this.state) {
       this.setState(nextProps.state);
     }
@@ -40,26 +38,32 @@ export default class Home extends React.Component {
           <div class="hero-text-white">DISCOVER &nbsp;</div>
           <div class="hero-text-black">PAKISTAN.</div>
           <div position="relative">
-          <div>
-                <div>
-                    <div className = "searchBar">
+            <div>
+              <div>
+                <div className="searchBar">
+                  <input
+                    label="Search"
+                    icon="search"
+                    placeholder={"Search Travelow"}
+                    onChange={this.searchHandler}
+                    height="10px"
+                  ></input>
 
-                        <input label="Search" icon="search" placeholder={'Search Travelow'} onChange={this.searchHandler} height='10px'></input>
+                  <select
+                    value={this.state.Destination}
+                    onChange={this.handleType}
+                  >
+                    <option>Destination</option>
+                    <option>Travel Agent</option>
+                  </select>
 
-                        <select value={this.state.Destination} onChange={this.handleType}>
-                            <option>Destination</option>
-                            <option>Travel Agent</option>
-                        </select>
-
-                        
-
-                        <Link to="/searchresults">
-                            <button className="searchButton" onClick={this.query}><span>Search</span></button>
-                        </Link>
-
-                        {/* <button className="searchButton" onClick={this.logout}><span>Logout</span></button> */}
-                    </div>
+                  <Link to="/searchresults">
+                    <button className="searchButton" onClick={this.query}>
+                      <span>Search</span>
+                    </button>
+                  </Link>
                 </div>
+              </div>
             </div>
           </div>
         </div>

@@ -8,17 +8,12 @@ import MediaCard from "../Components/featuredTrip";
 import UserReviewCard from "../Components/UserReview";
 import "../OtherCssFiles/TravelAgentt.css";
 import { Link } from "react-router-dom";
-import SearchBar2 from "../Components/SearchBar2";
 import Button from "@material-ui/core/Button";
 
 export default class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    var showButton = false;
     this.state = props.state;
-    if (this.state.userType == "Customer") {
-      showButton = true;
-    }
   }
 
   componentWillReceiveProps(nextProps) {

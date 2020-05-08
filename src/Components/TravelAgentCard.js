@@ -29,7 +29,7 @@ class TravelAgentt extends Component {
     return (
       <div>
         <Link
-          to="/travelagentprofileloggedin"
+          to="/travelagentprofilepublic"
           style={{ textDecoration: "none", textTransform: "none" }}
           cond
         >

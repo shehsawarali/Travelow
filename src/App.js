@@ -15,8 +15,6 @@ import TravelAgentProfilePublic from "./Pages/TravelAgentProfilePublic";
 import AgentProfileLoggedIn from "./Pages/TravelAgentProfileSignedIn";
 import WriteReview from "./Pages/RatingAndReview";
 import { Route } from "react-router-dom";
-
-/*SHEHSAWAR*/
 import firebase from "./config/fire";
 
 class App extends React.Component {
@@ -65,7 +63,6 @@ class App extends React.Component {
           path="/trips"
           render={(props) => <Trips {...props} state={this.state} />}
         ></Route>
-        {/* Ayesha */}
         <Route
           exact
           path="/tripdetails"
@@ -139,4 +136,3 @@ class App extends React.Component {
 }
 
 export default App;
-/*SHEHSAWAR*/

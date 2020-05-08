@@ -90,13 +90,8 @@ body {
 }
 
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url("./Images/mainBackground.jpg");
-
-  /* Set a specific height */
   min-height: 600px;
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,13 +99,8 @@ body {
 }
 
 .hero-image-contact {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url("./Images/smallerBackground.jpg");
-
-  /* Set a specific height */
   min-height: 300px;
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -637,9 +627,6 @@ h4 {
   text-align: center;
   justify-content: center;
   background-color: white;
-
-  /*margin-left: 55%;
-  margin-top: -16%;*/
 }
 
 .agentsContainer .agentBox2 {
@@ -666,8 +653,6 @@ h4 {
   justify-content: center;
   margin-left: 25px;
   margin-right: 25px;
-  /*margin-top: 25px;
-  display: block;*/
 }
 
 .agentsContainer .agentLogo2 {
@@ -728,7 +713,6 @@ h4 {
 }
 
 .searchBar2 input {
-  /*153*/
   border: 5px solid rgb(209, 209, 209);
   background-color: rgb(209, 209, 209);
   width: 25%;
@@ -756,7 +740,7 @@ h4 {
 }
 
 .searchBar2 button {
-  background-color: #0f1daf; /* Green */
+  background-color: #0f1daf;
   border: none;
   color: white;
   border-radius: 5px;

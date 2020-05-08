@@ -26,7 +26,6 @@ class UploadTripPage extends Component {
         <div className="formFormatting">
           <UploadForm state={this.state}/>
         </div>
-        {/* <CheckBox /> */}
       </>
     );
   }
