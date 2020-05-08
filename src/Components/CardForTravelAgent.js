@@ -3,18 +3,21 @@
 import React, { Component } from "react";
 import "../OtherCssFiles/TravelAgentt.css";
 
-
-// this is the card that contais travel agent info and name
 class Carddd extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = this.props.agent;
+  }
     render() {
         return (
           <div >
             <div class= "TravelAgentName">
-              Travel Agency name
+              {this.state.companyName}
             </div>
             
             <div class="TravelAgentInfo">
-              Here we will put travel agency info...
+              {this.state.email}
             </div>
           </div>
         );
