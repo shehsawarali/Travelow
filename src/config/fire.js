@@ -2,14 +2,14 @@ import firebase from "firebase";
 import 'firebase/storage';
 
 var firebaseConfig = {
-  apiKey: "AIzaSyDJ_Dc35zVoj1s36HdzJwyslE9jt8ShDN4",
-  authDomain: "travelow-take1.firebaseapp.com",
-  databaseURL: "https://travelow-take1.firebaseio.com",
-  projectId: "travelow-take1",
-  storageBucket: "travelow-take1.appspot.com",
-  messagingSenderId: "841019004829",
-  appId: "1:841019004829:web:20cd28dce08c3cc8b7c174",
-  measurementId: "G-969WGQZR0M",
+  apiKey: "AIzaSyD50GG9K_IB9H6vsqkqz2WGS4p7SGHrHAA",
+  authDomain: "project-travelow.firebaseapp.com",
+  databaseURL: "https://project-travelow.firebaseio.com",
+  projectId: "project-travelow",
+  storageBucket: "project-travelow.appspot.com",
+  messagingSenderId: "1041547109781",
+  appId: "1:1041547109781:web:e8974c05a023bbe26e029c",
+  measurementId: "G-SG9LEGCYDK"
 };
 // Initialize Firebase
 const fire = firebase.initializeApp(firebaseConfig);
