@@ -49,7 +49,7 @@ class ContactUs extends React.Component {
         {/* this sets up the top of the page */}
         <div className="hero-image-contact">
           <NavBar state={this.state}/>
-          <div className="text">CONTACT US</div>
+          <div className="text">Contact Us</div>
         </div>
 
         

@@ -35,8 +35,8 @@ export default class Home extends React.Component {
         ></meta>
         <div class="hero-image">
           <NavBar state={this.state} />
-          <div class="hero-text-white">DISCOVER &nbsp;</div>
-          <div class="hero-text-black">PAKISTAN.</div>
+          <div class="hero-text-white">"Somewhere, something incredible is waiting to be known"</div>
+          <div class="hero-text-black">- Carl Sagan</div>
           <div position="relative">
             <div>
               <div>
@@ -67,7 +67,7 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <Title title="-FEATURED TRIPS-" />
+        <Title title="FEATURED TRIPS"/>
         <div className="organize-cards">
           <MediaCard />
         </div>
